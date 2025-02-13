@@ -74,7 +74,7 @@ Pour chacun des ensembles $E$ autosimilaires ci-dessous :
 
 Soit $\mathcal{S}$ le SIF dont l'attracteur est représenté ci-dessous.
 
-![Fractale](Images/fractal3.jpg)
+![Fractale](Images/fractal3.png)
 
 1. Trouvez 3 fonctions $f_1, f_2$ et $f_3$ telles que $\mathcal{S} = \{f_1,f_2,f_3\}$.
 

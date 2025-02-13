@@ -1,0 +1,176 @@
+---
+title: "13 - Localisation"
+author: "Jérôme Soucy"
+---
+
+## Indications
+
+Pour répondre aux questions, vous devez considérer que :
+
+- La Terre est sphérique et son rayon est de $6378$ km ;
+- La vitesse du son est de $0{,}348$ km/s ;
+- La vitesse de la lumière est de $299\,792{,}458$ km/s.
+
+## Question 1
+
+Trouvez les coordonnées polaires $(r,\theta)$ des points dont les coordonnées cartésiennes sont données ci-dessous. Donnez l'angle $\theta$ en radians.
+
+1. $(1, 0)$
+
+   ::: solution
+   $\left(r, \theta\right) = (1, 0)$
+   :::
+
+2. $(-8, 8)$
+
+   ::: solution
+   $\left(r, \theta\right) = \left(8\sqrt{2}, \dfrac{3\pi}{4}\right)$
+   :::
+
+3. $\left(-5\sqrt{3}, -5\right)$
+
+   ::: solution
+   $\left(r, \theta\right) = \left(10, -\dfrac{2\pi}{3}\right)$
+   :::
+
+4. $(0, 0)$ 
+
+   ::: solution
+   Non définies
+   :::
+
+## Question 2
+
+Trouvez les coordonnées cartésiennes $(x, y)$ des points dont les coordonnées polaires sont données ci-dessous.
+
+1. $(2, 135^\circ)$
+
+   ::: solution
+   $\left(-\sqrt{2}, \sqrt{2}\right)$
+   :::
+
+2. $\left(8, -\dfrac{\pi}{3}\right)$
+
+   ::: solution
+   $\left(4, 4\sqrt{3}\right)$
+   :::
+
+## Question 3
+
+Trouvez les coordonnées sphériques $(\rho, \theta, \phi)$ des points dont les coordonnées cartésiennes sont données ci-dessous. Donnez les angles en radians.
+
+1. $\left(-1, 1, \sqrt{2}\right)$
+
+   ::: solution
+   $(\rho, \theta, \phi) = \left(2, \dfrac{3\pi}{4}, \dfrac{\pi}{4}\right)$
+   :::
+
+2. $\left(0, -4, 4\sqrt{3}\right)$
+
+   ::: solution
+   $(\rho, \theta, \phi) = \left(8, -\dfrac{\pi}{2}, \dfrac{\pi}{3}\right)$
+   :::
+
+## Question 4
+
+1. Trouvez une fonction $f(r)$ qui prend une mesure d'angle en radians et la transforme en degrés.
+
+2. Trouvez une fonction $g(r)$ qui prend une mesure d'angle en degrés et la transforme en radians.
+
+3. Trouvez une fonction $f(d, m, s)$ qui transforme un angle en degrés-minutes-secondes vers un angle en radians. On se souviendra qu’un degré contient 60 minutes, et qu’une minute contient 60 secondes.
+
+   ::: solution
+   $f(d, m, s) = \dfrac{\pi}{180}\left(d + \dfrac{m}{60} + \dfrac{s}{3600}\right)$
+   :::
+
+## Question 5
+
+En vous référant au texte *La traversée du Grand LacUne*, déterminez la position du bateau dans chacune des situations ci-dessous. Les coordonnées de $P_i$ correspondent à celle du $i^\text{e}$ port, alors que $t_i$ est le temps de parcours du son entre le canon du $i^\text{e}$ port et le bateau.
+
+$$
+\begin{align*}
+P1 &= (0, 0)     & t_1 &= 126\ \text{s} \\
+P2 &= (50, 70)   & t_2 &= 157\ \text{s} \\
+P3 &= (90, 20)   & t_3 &= 173\ \text{s}
+\end{align*}
+$$
+
+1. Vous connaissez les coordonnées de $P_1$ et $P_2$, de même que les temps $t_1$ et $t_2$. Vous savez de plus qu’il n’y a pas d’erreur d’horloge.
+
+   ::: solution
+   Il y a deux solutions possibles :
+   $$
+   (2{,}05585682; 43{,}79977804) \quad \text{et} \quad (40{,}76545810; 16{,}15006284).
+   $$
+   :::
+
+2. Vous connaissez les coordonnées de tous les ports, de même que les temps de parcours du son de tous les canons. Cependant, vous savez qu’il y a une erreur d’horloge. Donnez aussi l’erreur de l’horloge.
+
+   ::: solution
+   On obtient deux valeurs possibles pour l’erreur de l’horloge : $10{,}83394095$ s et $287{,}3746477$ s. La première valeur semble la plus plausible, car sinon les temps mesurés seraient inférieurs à l’erreur de l’horloge. On en conclut donc que la position est $(33{,}59659918; 21{,}85171980)$.
+   :::
+
+## Question 6
+
+On s’intéresse ici à l’imprécision sur la position d’un point dans le plan.
+
+1. Trouvez les coordonnées d’un point $P$ situé à $147$ km du point $(50, 0)$ et à $139.4$ km du point $(0, 50)$.
+
+   ::: solution
+   $(-83{,}437779; -61{,}671379)$ et $(111{,}671379; 133{,}437779)$
+   :::
+
+2. Si le point $P$ est situé à $147$ km $\pm$ $0.1$ km du point $(50, 0)$ et à $139.4$ km $\pm$ $0.1$ km du point $(0, 50)$, quelle est l’erreur maximale qu’on commet sur la position de $P$ en utilisant la réponse obtenue en (a) ?
+
+   ::: solution
+   Pour le point situé près de $(111{,}671379; 133{,}437779)$, l’erreur maximale correspond à :
+   $$
+   \max\{0{,}4073064796; 0{,}4071887791\} = 0{,}4073064796.
+   $$
+   Pour le point situé près de $(-83{,}437779; -61{,}671379)$, l’erreur maximale correspond à :
+   $$
+   \max\{0{,}407306481; 0{,}407188782\} = 0.407306481.
+   $$
+   :::
+
+3. Trouvez les coordonnées d’un point $Q$ situé à $147$ km du point $(50, 0)$ et à $138.8$ km du point $(50, -100)$.
+
+4. Si le point $Q$ est situé à $147$ km $\pm$ $0.1$ km du point $(50, 0)$ et à $138.8$ km $\pm$ $0.1$ km du point $(50, -100)$, quelle est l’erreur maximale qu’on commet sur la position de $Q$ en utilisant la réponse obtenue en (c) ?
+
+5. Est-ce que l’erreur maximale sur l’emplacement est plus grande pour le point $P$ de la partie (b) ou pour le point $Q$ de la partie (d) ? Pourquoi en est-il ainsi ?
+
+   ::: solution
+   Pour trouver les coordonnées du point $Q$, on procède comme pour le point $P$. On trouvera que l’erreur d’estimation de la position est moins grande, car les cercles s’intersectent à un angle plus proche de $90^\circ$.
+   :::
+
+## Question 7
+
+Soit $P$ un point de l’espace dont les coordonnées géocentriques sont $(36000,\ 10000,\ 15000)$, données en kilomètres.
+
+1. Quelles sont les coordonnées sphériques de $P$ ?
+
+   ::: solution
+   $(\rho;\ \theta;\ \phi) = (40261{,}644; 0{,}270946850; 0{,}381769355)$
+   :::
+
+2. À quelle altitude, par rapport à la Terre, ce point est-il situé ?
+
+   ::: solution
+   $33\,883{,}644$ km
+   :::
+
+## Question 8
+
+Lors de la 28$^\text{e}$ assemblée générale de l’Union astronomique internationale, l’unité astronomique (ua) a été définie comme valant exactement $149\,597\,870\,700$ m. Il s'agit grosso modo de la distance entre la Terre et le Soleil.
+
+1. En arrondissant à la seconde, combien de temps met la lumière à nous parvenir du Soleil ?
+
+   ::: solution
+   $8$ minutes $19$ secondes
+   :::
+
+2. Combien d'unités astronomiques correspondent à une année-lumière ? Rappelons qu'une année-lumière correspond à la distance parcourue par la lumière en une année.
+
+   ::: solution
+   $63\,241$ ua
+   :::

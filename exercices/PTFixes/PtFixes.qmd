@@ -1,0 +1,25 @@
+---
+title: "04 - Les points fixes"
+author: "Jérôme Soucy"
+---
+
+## Question 1
+
+Trouvez les points fixes des fonctions ci-dessous.
+
+1. $f(x) = x^3$
+2. $f(x, y) = (2x + y, x - y)$
+3. La fonction de $\mathbb{R}^2$ vers $\mathbb{R}^2$ définie par $R_a \circ R_b$, où $a$ est la droite $y = x$ et $b$ la droite $y = 3 - x$.
+4. La fonction $\lfloor x \rfloor$.
+
+
+## Question 2
+
+1. Un seul polynôme possède une infinité de points fixes. Lequel ?
+2. Expliquez pourquoi un polynôme de degré $n \geq 2$ possède au plus $n$ points fixes.
+3. Pour chaque $n \in \mathbb{N}^{\star}$, trouvez un polynôme de degré $n$ qui possède $n$ points fixes.
+
+
+## Question 3
+
+Vrai ou faux avec justification : si $1$ est une valeur propre de la matrice $A$, alors la fonction de $\mathbb{R}^2$ dans $\mathbb{R}^2$ définie par $f(\vec{x}) = A\vec{x}$ possède au moins un point fixe.

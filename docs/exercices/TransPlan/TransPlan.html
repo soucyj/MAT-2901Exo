@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jérôme Soucy">
+
+<title>02 - Transformations du plan – MAT-2901 : Mathématiques et technologie</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../exercices/EspacesMet/EspacesMet.html" rel="next">
+<link href="../../exercices/IntroFractales/IntroFractales.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<style>
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 0;
+}
+ol > li {
+  counter-increment: item;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 2em;
+}
+ol > li::before {
+  content: "(" counter(item, lower-alpha) ")";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+</style>
+<style>
+.solution-toggle {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #E6F3FF;
+  color: #333;
+  border: 1px solid #BED9F3;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem; /* Avant: 0.3rem 0.8rem */
+  font-size: 0.9rem; /* Nouvelle ligne ajoutée */
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.solution-toggle:hover {
+  background-color: #D1E8FF;
+  transform: translateY(-1px);
+}
+
+.solution {
+  border-left: 4px solid #4A90E2;
+  padding: 1rem 1rem 1rem 1.5rem;
+  margin: 1rem 0;
+  background-color: rgba(74, 144, 226, 0.1);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+  .solution-toggle {
+    background-color: #1A3B5C;
+    color: #E6F3FF;
+    border-color: #4A90E2;
+  }
+  
+  .solution-toggle:hover {
+    background-color: #2C5282;
+  }
+  
+  .solution {
+    border-left-color: #4A90E2;
+    background-color: rgba(74, 144, 226, 0.05);
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.solution').forEach(solution => {
+    const button = document.createElement('button');
+    button.textContent = 'Solution';
+    button.className = 'solution-toggle';
+    
+    button.addEventListener('click', () => {
+      const isHidden = solution.style.display === 'none';
+      solution.style.display = isHidden ? 'block' : 'none';
+      button.textContent = isHidden ? 'Cacher la solution' : 'Solution';
+    });
+    
+    solution.parentNode.insertBefore(button, solution);
+    solution.style.display = 'none';
+  });
+});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercices/TransPlan/TransPlan.html"><span class="chapter-title">02 - Transformations du plan</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">MAT-2901 : Mathématiques et technologie</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Présentation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/IntroFractales/IntroFractales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">01 - Introduction aux fractales</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/TransPlan/TransPlan.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">02 - Transformations du plan</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/EspacesMet/EspacesMet.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">03 - Espaces métriques</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/PtFixes/PtFixes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">04 - Les points fixes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/SIF/SIF.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">05 - Les SIF</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/NumInfo/NumInfo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">06 - Numération et stockage</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/Crypto1/Crypto1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">07 - Cryptographie (1/3)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/Crypto2/Crypto2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">08 - Cryptographie (2/3)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/Crypto3/Crypto3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">09 - Cryptographie (3/3)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/PSto1/PSto1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">10 - Processus stochastiques (1/3)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/PSto2/PSto2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">11 - Processus stochastiques (2/3)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/PSto3/PSto3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">12 - Processus stochastiques (3/3)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/GPS/GPS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">13 - Localisation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercices/CG/CG.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">14 - Couteau gamma</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
+  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
+  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">02 - Transformations du plan</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jérôme Soucy </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Dernière mise à jour</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">19 décembre 2024 à 09:19</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p>Soit l’application affine dont la représentation analytique est donnée par</p>
+<p><span class="math display">\[
+w\left(\begin{array}{c}x\\y\end{array}\right) = \left(\begin{array}{cc}1&amp;-1\\2&amp;0\end{array}\right)
+\left(\begin{array}{c}x\\y\end{array}\right) + \left(\begin{array}{c}-1\\1\end{array}\right).
+\]</span></p>
+<ol>
+<li><p>Déterminez l’image du rectangle plein <span class="math inline">\(\left\{(x,y) : x \in [0,2] ~\text{et}~y \in [0,1]\right\}\)</span> par <span class="math inline">\(w\)</span>.</p></li>
+<li><p>Déterminez l’image par <span class="math inline">\(w\)</span> du triangle plein dont les sommets sont donnés par <span class="math display">\[A = (1,1), B = (0,0) ~\text{et}~ C = (-1,1).\]</span></p></li>
+</ol>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span></p>
+<ol>
+<li><p>C’est un parallélogramme (plein) de sommets <span class="math inline">\((-2,1), (-1,1), (1,5)\)</span> et <span class="math inline">\((0,5).\)</span></p></li>
+<li><p>C’est un triangle (plein) de sommets <span class="math inline">\((-1,3), (-1,1)\)</span> et <span class="math inline">\((-3,-1).\)</span></p></li>
+</ol>
+</div>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p>Trouvez l’expression analytique de l’isométrie qui envoie le triangle de la figure 1 sur celui de la figure 2.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Triangle1.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>Figure 1</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Triangle2.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>Figure 2</figcaption>
+</figure>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>L’expression analytique d’une telle isométrie peut être exprimée de la façon suivante&nbsp;:</p>
+<p><span class="math display">\[
+w\left(\begin{array}{c}x\\y\end{array}\right) =
+\left(\begin{array}{cc}-\frac{\sqrt{2}}{2}&amp;\frac{\sqrt{2}}{2}\\
+-\frac{\sqrt{2}}{2}&amp;-\frac{\sqrt{2}}{2}\end{array}\right)
+\left(\begin{array}{c}x\\y\end{array}\right) +
+\left(\begin{array}{c}1-\frac{\sqrt{2}}{4}\\\frac{\sqrt{2}}{4}\end{array}\right).
+\]</span></p>
+</div>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p>Trouvez l’expression analytique d’une application affine qui envoie le triangle de sommets <span class="math inline">\(A = (-11,3),B = (1,12)\)</span> et <span class="math inline">\(C = (-1,14)\)</span> sur le triangle de sommets <span class="math inline">\(P = (90,-68), Q = (69,-53)\)</span> et <span class="math inline">\(R = (83,-59).\)</span> On sous-entend ici que le point <span class="math inline">\(A\)</span> est envoyé sur <span class="math inline">\(P\)</span>, le point <span class="math inline">\(B\)</span> sur <span class="math inline">\(Q\)</span> et le point <span class="math inline">\(C\)</span> sur <span class="math inline">\(R.\)</span> Il serait souhaitable d’utiliser un outil informatique pour faire les calculs.</p>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>L’expression analytique de la transformation cherchée est&nbsp;:</p>
+<p><span class="math display">\[
+w\left(\begin{array}{c}x\\y\end{array}\right) =
+\left(\begin{array}{cc}-4&amp;3\\2&amp;-1\end{array}\right)
+\left(\begin{array}{c}x\\y\end{array}\right) +
+\left(\begin{array}{c}37\\-43\end{array}\right).
+\]</span></p>
+<p><strong>Imposition des conditions</strong></p>
+<p>Il faut déterminer <span class="math inline">\(a, b, c, d, e\)</span> et <span class="math inline">\(f\)</span> tels que la transformation</p>
+<p><span class="math display">\[
+w\left(\begin{array}{c}x\\y\end{array}\right) =
+\left(\begin{array}{cc}a &amp; b \\ c &amp; d\end{array}\right)
+\left(\begin{array}{c}x\\y\end{array}\right) +
+\left(\begin{array}{c}e\\f\end{array}\right)
+\]</span></p>
+<p>soit telle que <span class="math inline">\(w(A) = P\)</span>, <span class="math inline">\(w(B) = Q\)</span> et <span class="math inline">\(w(C) = R\)</span>. Ces trois conditions se traduisent :</p>
+<p><span class="math display">\[
+w\left(\begin{array}{c}-11\\3\end{array}\right) =
+\left(\begin{array}{cc}a &amp; b \\ c &amp; d\end{array}\right)
+\left(\begin{array}{c}-11\\3\end{array}\right) +
+\left(\begin{array}{c}e\\f\end{array}\right) =
+\left(\begin{array}{c}90\\-68\end{array}\right),
+\]</span></p>
+<p><span class="math display">\[
+w\left(\begin{array}{c}1\\12\end{array}\right) =
+\left(\begin{array}{cc}a &amp; b \\ c &amp; d\end{array}\right)
+\left(\begin{array}{c}1\\12\end{array}\right) +
+\left(\begin{array}{c}e\\f\end{array}\right) =
+\left(\begin{array}{c}69\\-53\end{array}\right),
+\]</span></p>
+<p><span class="math display">\[
+w\left(\begin{array}{c}-1\\14\end{array}\right) =
+\left(\begin{array}{cc}a &amp; b \\ c &amp; d\end{array}\right)
+\left(\begin{array}{c}-1\\14\end{array}\right) +
+\left(\begin{array}{c}e\\f\end{array}\right) =
+\left(\begin{array}{c}83\\-59\end{array}\right),
+\]</span></p>
+<p>qui, sous forme d’équations, s’écrivent :</p>
+<p><span class="math display">\[
+\begin{align}
+-11a + 3b + e &amp;= 90, \\
+-11c + 3d + f &amp;= -68, \\
+a + 12b + e &amp;= 69, \\
+c + 12d + f &amp;= -53, \\
+-a + 14b + e &amp;= 83, \\
+-c + 14d + f &amp;= -59.
+\end{align}
+\]</span></p>
+<p><strong>Résolution des systèmes</strong></p>
+<p>On considère d’abord le système formé des équations ne contenant que les nombres <span class="math inline">\(a,b\)</span> et <span class="math inline">\(e\)</span> :</p>
+<p><span class="math display">\[
+\begin{aligned}
+-11a + 3b + e &amp;= 90,\\
+a + 12b + e &amp;= 69,\\
+-a + 14b + e &amp;= 83.
+\end{aligned}
+\]</span></p>
+<p>Par la suite, on traite le système formé des équations ne contenant que les nombres <span class="math inline">\(c,d\)</span> et <span class="math inline">\(f\)</span> :</p>
+<p><span class="math display">\[
+\begin{align}
+-11c + 3d + f &amp;= -68,\\
+c + 12d + f &amp;= -53,\\
+-c + 14d + f &amp;= -59.
+\end{align}
+\]</span></p>
+<p>Le premier système nous donne <span class="math inline">\(a = -4\)</span>, <span class="math inline">\(b = 3\)</span> et <span class="math inline">\(e = 37\)</span>, et le second conduit à <span class="math inline">\(c = 2\)</span>, <span class="math inline">\(d = -1\)</span> et <span class="math inline">\(f = -43\)</span>. Ainsi, la transformation cherchée est :</p>
+<p><span class="math display">\[
+w\left(\begin{array}{c}x\\y\end{array}\right) =
+\left(\begin{array}{cc}-4 &amp; 3 \\ 2 &amp; -1\end{array}\right)
+\left(\begin{array}{c}x\\y\end{array}\right) +
+\left(\begin{array}{c}37\\-43\end{array}\right).
+\]</span></p>
+</div>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<p>Trouvez l’image du point de coordonnées <span class="math inline">\((x,y)\)</span> par une homothétie de centre <span class="math inline">\((h,k)\)</span> et de rapport <span class="math inline">\(c\)</span>. (Suggestion : translatez d’abord le point <span class="math inline">\((x,y)\)</span> selon le vecteur <span class="math inline">\((-h,-k)\)</span> avant d’effectuer l’homothétie, puis translatez le point obtenu selon le vecteur <span class="math inline">\((h,k)\)</span>.)</p>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>C’est le point de coordonnées <span class="math inline">\(\left(cx+h(1-c), cy+k(1-c)\right)\)</span>.</p>
+</div>
+</section>
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
+<p>Trouvez deux similitudes qui envoient le segment <span class="math inline">\(\mathcal{S}\)</span>, reliant les points <span class="math inline">\(P = (-3,-1)\)</span> et <span class="math inline">\(Q = (-1,1)\)</span>, sur le segment <span class="math inline">\(\mathcal{T}\)</span>, reliant les points <span class="math inline">\(A = (3,1)\)</span> et <span class="math inline">\(B = (2,2)\)</span>. On sous-entend ici que le point <span class="math inline">\(P\)</span> est envoyé sur <span class="math inline">\(A\)</span>, et le point <span class="math inline">\(Q\)</span> sur <span class="math inline">\(B\)</span>.</p>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>Les expressions analytiques des deux similitudes cherchées sont les suivantes&nbsp;:</p>
+<p><span class="math display">\[
+w_1\left(\begin{array}{c}x\\y\end{array}\right) =
+\left(\begin{array}{cc}0&amp;-\frac{1}{2}\\\frac{1}{2}&amp;0\end{array}\right)
+\left(\begin{array}{c}x\\y\end{array}\right) +
+\left(\begin{array}{c}\frac{5}{2}\\\frac{5}{2}\end{array}\right),
+\]</span></p>
+<p><span class="math display">\[
+w_2\left(\begin{array}{c}x\\y\end{array}\right) =
+\left(\begin{array}{cc}-\frac{1}{2}&amp;0\\0&amp;\frac{1}{2}\end{array}\right)
+\left(\begin{array}{c}x\\y\end{array}\right) +
+\left(\begin{array}{c}\frac{3}{2}\\\frac{3}{2}\end{array}\right).
+\]</span></p>
+</div>
+</section>
+<section id="question-6" class="level2">
+<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
+<p>Trouvez l’expression analytique de la transformation affine correspondant à la projection orthogonale sur la droite d’équation <span class="math inline">\(y = x\)</span>.</p>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>Si <span class="math inline">\(w\)</span> désigne la projection orthogonale sur la droite d’équation <span class="math inline">\(y = x\)</span>, alors</p>
+<p><span class="math display">\[
+w\left(\begin{array}{c}x\\y\end{array}\right) =
+\left(\begin{array}{cc}\frac{1}{2}&amp;\frac{1}{2}\\\frac{1}{2}&amp;\frac{1}{2}\end{array}\right)
+\left(\begin{array}{c}x\\y\end{array}\right).
+\]</span></p>
+</div>
+</section>
+<section id="question-7" class="level2">
+<h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
+<p>Soient <span class="math inline">\(a,b,r\in]0,\infty[\)</span>, et <span class="math inline">\(e,f\in\mathbb{R}\)</span>. Considérons l’application affine <span class="math inline">\(w:\mathbb{R}^2\to \mathbb{R}^2\)</span> dont l’expression analytique est donnée par</p>
+<p><span class="math display">\[
+w\left(\begin{array}{c}x\\y\end{array}\right) =
+\left(\begin{array}{cc}a&amp;0\\0&amp;b\end{array}\right)
+\left(\begin{array}{c}x\\y\end{array}\right) +
+\left(\begin{array}{c}e\\f\end{array}\right).
+\]</span></p>
+<p>Quelle est l’équation du lieu des points de <span class="math inline">\(\mathbb{R}^2\)</span> correspondant à l’image du cercle d’équation <span class="math inline">\(x^2 + y^2 = r^2\)</span> par <span class="math inline">\(w\)</span>&nbsp;?</p>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>Il s’agit d’une ellipse d’équation</p>
+<p><span class="math display">\[
+\frac{(x-e)^2}{(ar)^2} + \frac{(y-f)^2}{(br)^2} = 1,
+\]</span></p>
+<p>c’est-à-dire une ellipse centrée au point <span class="math inline">\((e,f)\)</span> dont l’axe horizontal est de longueur <span class="math inline">\(2ar\)</span> et dont l’axe vertical est de longueur <span class="math inline">\(2br\)</span>.</p>
+</div>
+</section>
+<section id="question-8" class="level2">
+<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
+<p>On considère le triangle rectangle <span class="math inline">\(\mathcal{T}:=\Delta BAC\)</span> illustré ci-dessous dont les côtés sont de longueur <span class="math inline">\(a, b\)</span> et <span class="math inline">\(c\)</span>. Le triangle <span class="math inline">\(\mathcal{T}\)</span> est l’union des triangles rectangles <span class="math inline">\(\mathcal{T}_1:=\Delta ADC\)</span> et <span class="math inline">\(\mathcal{T}_2:=\Delta BDC\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Pythagore.png" class="img-fluid figure-img"></p>
+<figcaption>Illustration du triangle rectangle</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li><p>Montrez que <span class="math inline">\(\mathcal{T}_1\)</span> et <span class="math inline">\(\mathcal{T}_2\)</span> sont semblables à <span class="math inline">\(\mathcal{T}\)</span>.</p></li>
+<li><p>D’après (a), il existe des similitudes <span class="math inline">\(w_1\)</span> et <span class="math inline">\(w_2\)</span> telles que <span class="math inline">\(w_1(\mathcal{T})=\mathcal{T}_1\)</span> et <span class="math inline">\(w_2(\mathcal{T})=\mathcal{T}_2\)</span>. Soient <span class="math inline">\(k_1\)</span> et <span class="math inline">\(k_2\)</span>, les rapports de similitude de <span class="math inline">\(w_1\)</span> et <span class="math inline">\(w_2\)</span> respectivement. Déterminez les valeurs de <span class="math inline">\(k_1\)</span> et <span class="math inline">\(k_2\)</span>.</p>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>On trouve que <span class="math inline">\(k_1 = \frac{a}{c}\)</span> et <span class="math inline">\(k_2 = \frac{b}{c}\)</span>.</p>
+</div></li>
+<li><p>Montrez que si <span class="math inline">\(\mathcal{A}\)</span> et <span class="math inline">\(\mathcal{B}\)</span> sont deux triangles semblables tels que <span class="math inline">\(\mathcal{B}=w(\mathcal{A})\)</span>, où <span class="math inline">\(w\)</span> est une similitude de rapport <span class="math inline">\(k\)</span>, alors Aire(<span class="math inline">\(\mathcal{B}\)</span>)=<span class="math inline">\(k^2\)</span>Aire(<span class="math inline">\(\mathcal{A}\)</span>).</p></li>
+<li><p>Désignons par <span class="math inline">\(s, s_1\)</span> et <span class="math inline">\(s_2\)</span> les aires des triangles <span class="math inline">\(\mathcal{T}, \mathcal{T}_1\)</span> et <span class="math inline">\(\mathcal{T}_2\)</span> respectivement. Utiliser ce qui précède, et l’égalité <span class="math inline">\(s = s_1 + s_2\)</span> pour démontrer le théorème de Pythagore.</p></li>
+<li><p>Trouvez un ensemble <span class="math inline">\(\mathcal{E}\)</span> tel que <span class="math inline">\(w_1(\mathcal{E})\cup w_2(\mathcal{E})=\mathcal{E}\)</span>.</p>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>On vérifie que <span class="math inline">\(\mathcal{E} = \mathcal{T}\)</span> fait l’affaire.</p>
+</div></li>
+</ol>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../exercices/IntroFractales/IntroFractales.html" class="pagination-link" aria-label="01 - Introduction aux fractales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">01 - Introduction aux fractales</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../exercices/EspacesMet/EspacesMet.html" class="pagination-link" aria-label="03 - Espaces métriques">
+        <span class="nav-page-text"><span class="chapter-title">03 - Espaces métriques</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Code source</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "02 - Transformations du plan"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Jérôme Soucy"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 1</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Soit l'application affine dont la représentation analytique est donnée par</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>w\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) = \left(\begin{array}{cc}1&amp;-1<span class="sc">\\</span>2&amp;0\end{array}\right)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) + \left(\begin{array}{c}-1<span class="sc">\\</span>1\end{array}\right).</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>#. Déterminez l'image du rectangle plein $\left<span class="sc">\{</span>(x,y) : x \in <span class="co">[</span><span class="ot">0,2</span><span class="co">]</span> ~\text{et}~y \in <span class="co">[</span><span class="ot">0,1</span><span class="co">]</span>\right<span class="sc">\}</span>$ par $w$.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>#. Déterminez l'image par $w$ du triangle plein dont les sommets sont donnés par $$A = (1,1), B = (0,0) ~\text{et}~ C = (-1,1).$$</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>::: solution</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>#. C'est un parallélogramme (plein) de sommets $(-2,1), (-1,1), (1,5)$ et $(0,5).$</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>#. C'est un triangle (plein) de sommets $(-1,3), (-1,1)$ et $(-3,-1).$</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 2</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Trouvez l'expression analytique de l'isométrie qui envoie le triangle de la figure 1 sur celui de la figure 2.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 1](Triangle1.png)</span>{width=400px}</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 2](Triangle2.png)</span>{width=400px}</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>::: solution</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>L'expression analytique d'une telle isométrie peut être exprimée de la façon suivante&nbsp;:</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>w\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) = </span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}-\frac{\sqrt{2}}{2}&amp;\frac{\sqrt{2}}{2}<span class="sc">\\</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>-\frac{\sqrt{2}}{2}&amp;-\frac{\sqrt{2}}{2}\end{array}\right)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) + </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}1-\frac{\sqrt{2}}{4}<span class="sc">\\</span>\frac{\sqrt{2}}{4}\end{array}\right).</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 3</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Trouvez l'expression analytique d'une application affine qui envoie le triangle de sommets $A = (-11,3),B = (1,12)$ et $C = (-1,14)$ sur le triangle de sommets $P = (90,-68), Q = (69,-53)$ et $R = (83,-59).$ On sous-entend ici que le point $A$ est envoyé sur $P$, le point $B$ sur $Q$ et le point $C$ sur $R.$ Il serait souhaitable d'utiliser un outil informatique pour faire les calculs.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>::: solution</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>L'expression analytique de la transformation cherchée est<span class="dv">&amp;nbsp;</span>:</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>w\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) = </span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}-4&amp;3<span class="sc">\\</span>2&amp;-1\end{array}\right)</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) + </span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}37<span class="sc">\\</span>-43\end{array}\right).</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>**Imposition des conditions**</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>Il faut déterminer $a, b, c, d, e$ et $f$ tels que la transformation</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>w\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) =</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}a &amp; b <span class="sc">\\</span> c &amp; d\end{array}\right)</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) +</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}e<span class="sc">\\</span>f\end{array}\right)</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>soit telle que $w(A) = P$, $w(B) = Q$ et $w(C) = R$. Ces trois conditions se traduisent :</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>w\left(\begin{array}{c}-11<span class="sc">\\</span>3\end{array}\right) =</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}a &amp; b <span class="sc">\\</span> c &amp; d\end{array}\right)</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}-11<span class="sc">\\</span>3\end{array}\right) +</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}e<span class="sc">\\</span>f\end{array}\right) =</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}90<span class="sc">\\</span>-68\end{array}\right),</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>w\left(\begin{array}{c}1<span class="sc">\\</span>12\end{array}\right) =</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}a &amp; b <span class="sc">\\</span> c &amp; d\end{array}\right)</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}1<span class="sc">\\</span>12\end{array}\right) +</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}e<span class="sc">\\</span>f\end{array}\right) =</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}69<span class="sc">\\</span>-53\end{array}\right),</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>w\left(\begin{array}{c}-1<span class="sc">\\</span>14\end{array}\right) =</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}a &amp; b <span class="sc">\\</span> c &amp; d\end{array}\right)</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}-1<span class="sc">\\</span>14\end{array}\right) +</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}e<span class="sc">\\</span>f\end{array}\right) =</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}83<span class="sc">\\</span>-59\end{array}\right),</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>qui, sous forme d'équations, s'écrivent :</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>-11a + 3b + e &amp;= 90, <span class="sc">\\</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>-11c + 3d + f &amp;= -68, <span class="sc">\\</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>a + 12b + e &amp;= 69, <span class="sc">\\</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>c + 12d + f &amp;= -53, <span class="sc">\\</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>-a + 14b + e &amp;= 83, <span class="sc">\\</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>-c + 14d + f &amp;= -59.</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>**Résolution des systèmes**</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>On considère d'abord le système formé des équations ne contenant que les nombres $a,b$ et $e$ :</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>-11a + 3b + e &amp;= 90,<span class="sc">\\</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>a + 12b + e &amp;= 69,<span class="sc">\\</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>-a + 14b + e &amp;= 83.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>Par la suite, on traite le système formé des équations ne contenant que les nombres $c,d$ et $f$ :</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>-11c + 3d + f &amp;= -68,<span class="sc">\\</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>c + 12d + f &amp;= -53,<span class="sc">\\</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>-c + 14d + f &amp;= -59.</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>Le premier système nous donne $a = -4$, $b = 3$ et $e = 37$, et le second conduit à $c = 2$, $d = -1$ et $f = -43$. Ainsi, la transformation cherchée est :</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>w\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) =</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}-4 &amp; 3 <span class="sc">\\</span> 2 &amp; -1\end{array}\right)</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) +</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}37<span class="sc">\\</span>-43\end{array}\right).</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 4</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>Trouvez l'image du point de coordonnées $(x,y)$ par une homothétie de centre $(h,k)$ et de rapport $c$. (Suggestion : translatez d'abord le point $(x,y)$ selon le vecteur $(-h,-k)$ avant d'effectuer l'homothétie, puis translatez le point obtenu selon le vecteur $(h,k)$.)</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>::: solution</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>C'est le point de coordonnées $\left(cx+h(1-c), cy+k(1-c)\right)$.</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 5</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>Trouvez deux similitudes qui envoient le segment $\mathcal{S}$, reliant les points $P = (-3,-1)$ et $Q = (-1,1)$, sur le segment $\mathcal{T}$, reliant les points $A = (3,1)$ et $B = (2,2)$. On sous-entend ici que le point $P$ est envoyé sur $A$, et le point $Q$ sur $B$.</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>::: solution</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>Les expressions analytiques des deux similitudes cherchées sont les suivantes&nbsp;:</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>w_1\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) = </span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}0&amp;-\frac{1}{2}<span class="sc">\\</span>\frac{1}{2}&amp;0\end{array}\right)</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) + </span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}\frac{5}{2}<span class="sc">\\</span>\frac{5}{2}\end{array}\right),</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>w_2\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) = </span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}-\frac{1}{2}&amp;0<span class="sc">\\</span>0&amp;\frac{1}{2}\end{array}\right)</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) + </span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}\frac{3}{2}<span class="sc">\\</span>\frac{3}{2}\end{array}\right).</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 6</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>Trouvez l'expression analytique de la transformation affine correspondant à la projection orthogonale sur la droite d'équation $y = x$.</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>::: solution</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>Si $w$ désigne la projection orthogonale sur la droite d'équation $y = x$, alors</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>w\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) = </span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}\frac{1}{2}&amp;\frac{1}{2}<span class="sc">\\</span>\frac{1}{2}&amp;\frac{1}{2}\end{array}\right)</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right).</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 7</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>Soient $a,b,r\in]0,\infty[$, et $e,f\in\mathbb{R}$. Considérons l'application affine $w:\mathbb{R}^2\to \mathbb{R}^2$ dont l'expression analytique est donnée par</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>w\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) = </span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{cc}a&amp;0<span class="sc">\\</span>0&amp;b\end{array}\right)</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}x<span class="sc">\\</span>y\end{array}\right) + </span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>\left(\begin{array}{c}e<span class="sc">\\</span>f\end{array}\right).</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>Quelle est l'équation du lieu des points de $\mathbb{R}^2$ correspondant à l'image du cercle d'équation $x^2 + y^2 = r^2$ par $w$&nbsp;?</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>::: solution</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>Il s'agit d'une ellipse d'équation</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>\frac{(x-e)^2}{(ar)^2} + \frac{(y-f)^2}{(br)^2} = 1,</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>c'est-à-dire une ellipse centrée au point $(e,f)$ dont l'axe horizontal est de longueur $2ar$ et dont l'axe vertical est de longueur $2br$.</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 8</span></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>On considère le triangle rectangle $\mathcal{T}:=\Delta BAC$ illustré ci-dessous dont les côtés sont de longueur $a, b$ et $c$. Le triangle $\mathcal{T}$ est l'union des triangles rectangles $\mathcal{T}_1:=\Delta ADC$ et $\mathcal{T}_2:=\Delta BDC$.</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="al">![Illustration du triangle rectangle](Pythagore.png)</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Montrez que $\mathcal{T}_1$ et $\mathcal{T}_2$ sont semblables à $\mathcal{T}$.</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>D'après (a), il existe des similitudes $w_1$ et $w_2$ telles que $w_1(\mathcal{T})=\mathcal{T}_1$ et $w_2(\mathcal{T})=\mathcal{T}_2$. Soient $k_1$ et $k_2$, les rapports de similitude de $w_1$ et $w_2$ respectivement. Déterminez les valeurs de $k_1$ et $k_2$.</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>   ::: solution</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>   On trouve que $k_1 = \frac{a}{c}$ et $k_2 = \frac{b}{c}$.</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>   :::</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Montrez que si $\mathcal{A}$ et $\mathcal{B}$ sont deux triangles semblables tels que $\mathcal{B}=w(\mathcal{A})$, où $w$ est une similitude de rapport $k$, alors Aire($\mathcal{B}$)=$k^2$Aire($\mathcal{A}$).</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Désignons par $s, s_1$ et $s_2$ les aires des triangles $\mathcal{T}, \mathcal{T}_1$ et $\mathcal{T}_2$ respectivement. Utiliser ce qui précède, et l'égalité $s = s_1 + s_2$ pour démontrer le théorème de Pythagore.</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Trouvez un ensemble $\mathcal{E}$ tel que $w_1(\mathcal{E})\cup w_2(\mathcal{E})=\mathcal{E}$.</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>   ::: solution</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>   On vérifie que $\mathcal{E} = \mathcal{T}$ fait l'affaire.</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>   :::</span></code><button title="Copier vers le presse-papier" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,1012 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MAT-2901 : Mathématiques et technologie",
+    "section": "",
+    "text": "Présentation\nBienvenue sur un site web complémentaire au site monPortail du cours MAT-2901 : Mathématiques et technologie, à l’Université Laval.\nCe site contient des séries d’exercices conçues pour accompagner les étudiants et étudiantes dans le cours. Chaque série d’exercices est soigneusement élaborée pour approfondir votre compréhension des concepts clés et vous préparer aux évaluations.",
+    "crumbs": [
+      "Présentation"
+    ]
+  },
+  {
+    "objectID": "index.html#licence-et-attributions",
+    "href": "index.html#licence-et-attributions",
+    "title": "MAT-2901 : Mathématiques et technologie",
+    "section": "Licence et attributions",
+    "text": "Licence et attributions\nCe site et son contenu sont mis à disposition sous licence Creative Commons Attribution - Pas d’Utilisation Commerciale (CC BY-NC).\n\n\n\n\n\n\nDroits d’utilisation\n\n\n\nVous êtes libre de :\n\nPartager, copier et redistribuer le contenu\nAdapter et transformer le contenu\n\nÀ condition de :\n\nCréditer la source en citant l’auteur du présent document avec un lien vers ce site\nNe pas faire d’usage commercial du contenu\n\nUne partie du code présenté sur ce site a été généré avec l’assistance de l’intelligence artificielle Claude (Anthropic) et ChatGPT-4o (OpenAI), tout en étant vérifié et adapté pour garantir son exactitude et sa pertinence pédagogique.\n\n\n\n\n\n\n\n\n\n\nLicence Creative Commons BY-NC\n\n\n\n\n\n\n\nGénéré avec assistance IA\n\n\n\n\n\n\nFigure 1: Certains éléments de code de ce site ont été générés par l’IA. Vous êtes libre d’utiliser le contenu de ce site dans la mesure où vous citez la source et n’en tirez pas de bénéfice financier.",
+    "crumbs": [
+      "Présentation"
+    ]
+  },
+  {
+    "objectID": "exercices/IntroFractales/IntroFractales.html",
+    "href": "exercices/IntroFractales/IntroFractales.html",
+    "title": "01 - Introduction aux fractales",
+    "section": "",
+    "text": "Question 1\nOn construit un flocon de von Koch à partir d’un triangle équilatéral dont les côtés sont de longueur 1.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>01 - Introduction aux fractales</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/IntroFractales/IntroFractales.html#question-1",
+    "href": "exercices/IntroFractales/IntroFractales.html#question-1",
+    "title": "01 - Introduction aux fractales",
+    "section": "",
+    "text": "Flocon de von Koch\n\n\n\nMontrez que le périmètre du flocon est infini.\nDéterminez l’aire du flocon.\n\n\nSolution. \n\nLe périmètre du flocon est multiplié par \\(\\frac{4}{3}\\) à chaque étape de la construction. Par conséquent, le périmètre est infini.\nL’aire du flocon est donnée par : \\[\n\\text{Aire finale} = \\frac{8}{5} A_0,\n\\] où \\(A_0\\) est l’aire du triangle équilatéral initial. Par exemple, pour un triangle dont les côtés mesurent 1, l’aire du flocon est \\(\\frac{2\\sqrt{3}}{5}\\).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>01 - Introduction aux fractales</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/IntroFractales/IntroFractales.html#question-2",
+    "href": "exercices/IntroFractales/IntroFractales.html#question-2",
+    "title": "01 - Introduction aux fractales",
+    "section": "Question 2",
+    "text": "Question 2\nOn construit un flocon de neige à partir d’un carré de côté de longueur \\(a\\).\n\n\n\nFlocon de neige\n\n\n\nTrouvez l’aire du flocon après \\(n\\) étapes.\nDéterminez la dimension de similitude du flocon de neige.\n\n\nSolution. \n\nSi \\(A_1 = a^2\\) est l’aire après une étape, nous avons : \\[\nA_n = \\left(\\frac{5}{9}\\right)^{n-1} a^2.\n\\]\nLa dimension de similitude est donnée par : \\[\n\\frac{\\ln 5}{\\ln 3}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>01 - Introduction aux fractales</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/IntroFractales/IntroFractales.html#question-3",
+    "href": "exercices/IntroFractales/IntroFractales.html#question-3",
+    "title": "01 - Introduction aux fractales",
+    "section": "Question 3",
+    "text": "Question 3\nSoit \\(E\\) l’ensemble des nombres réels dans l’intervalle \\([0, 1]\\) dont toutes les décimales sont paires.\n\nExpliquez comment on peut contruire l’ensemble \\(E\\) et débutant avec l’intervalle \\([0, 1]\\) duquel on retranche, à chaque étape, des intervalles.\nExpliquez pourquoi \\(E\\) est autosimilaire puis calculez sa dimension de similitude.\n\n\nSolution. \n\nOn construit \\(E\\) en retirant, à l’étape \\(n\\), les nombres dont la \\(n^\\text{e}\\) décimale est impaire.\nSa dimension de similitude est : \\[\n\\frac{\\ln 5}{\\ln 10}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>01 - Introduction aux fractales</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/IntroFractales/IntroFractales.html#question-4",
+    "href": "exercices/IntroFractales/IntroFractales.html#question-4",
+    "title": "01 - Introduction aux fractales",
+    "section": "Question 4",
+    "text": "Question 4\nPour chacun des ensembles autosimilaires suivants, déterminez son aire, de même que sa dimension de similitude.\n\nLe triangle de Sierpiński construit à partir d’un triangle équilatéral dont les côtés sont de longueur 1.\nLe tapis de Sierpiński construit à partir d’un carré dont les côtés sont de longueur 1.\n\n\nSolution. \n\nL’aire est nulle et la dimension de similitude est \\(\\frac{\\ln 3}{\\ln 2}\\).\nL’aire est nulle et la dimension de similitude est \\(\\frac{\\ln 8}{\\ln 3}\\).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>01 - Introduction aux fractales</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/IntroFractales/IntroFractales.html#question-5",
+    "href": "exercices/IntroFractales/IntroFractales.html#question-5",
+    "title": "01 - Introduction aux fractales",
+    "section": "Question 5",
+    "text": "Question 5\nPour chacun des ensembles autosimilaires suivants, déterminez son volume, de même que sa dimension de similitude.\n\nL’éponge de Menger construite à partir d’un cube dont les arêtes sont de longueur 1.\nLe tétraèdre de Sierpiński construit à partir d’un tétraèdre dont les arêtes sont de longueur 1.\n\n\nSolution. \n\nLe volume est nul et la dimension de similitude est \\(\\frac{\\ln 20}{\\ln 3}\\).\nLe volume est nul et la dimension de similitude est \\(2\\).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>01 - Introduction aux fractales</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/TransPlan/TransPlan.html",
+    "href": "exercices/TransPlan/TransPlan.html",
+    "title": "02 - Transformations du plan",
+    "section": "",
+    "text": "Question 1\nSoit l’application affine dont la représentation analytique est donnée par\n\\[\nw\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) = \\left(\\begin{array}{cc}1&-1\\\\2&0\\end{array}\\right)\n\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) + \\left(\\begin{array}{c}-1\\\\1\\end{array}\\right).\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>02 - Transformations du plan</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/TransPlan/TransPlan.html#question-1",
+    "href": "exercices/TransPlan/TransPlan.html#question-1",
+    "title": "02 - Transformations du plan",
+    "section": "",
+    "text": "Déterminez l’image du rectangle plein \\(\\left\\{(x,y) : x \\in [0,2] ~\\text{et}~y \\in [0,1]\\right\\}\\) par \\(w\\).\nDéterminez l’image par \\(w\\) du triangle plein dont les sommets sont donnés par \\[A = (1,1), B = (0,0) ~\\text{et}~ C = (-1,1).\\]\n\n\nSolution. \n\nC’est un parallélogramme (plein) de sommets \\((-2,1), (-1,1), (1,5)\\) et \\((0,5).\\)\nC’est un triangle (plein) de sommets \\((-1,3), (-1,1)\\) et \\((-3,-1).\\)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>02 - Transformations du plan</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/TransPlan/TransPlan.html#question-2",
+    "href": "exercices/TransPlan/TransPlan.html#question-2",
+    "title": "02 - Transformations du plan",
+    "section": "Question 2",
+    "text": "Question 2\nTrouvez l’expression analytique de l’isométrie qui envoie le triangle de la figure 1 sur celui de la figure 2.\n\n\n\nFigure 1\n\n\n\n\n\nFigure 2\n\n\n\nSolution. L’expression analytique d’une telle isométrie peut être exprimée de la façon suivante :\n\\[\nw\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) =\n\\left(\\begin{array}{cc}-\\frac{\\sqrt{2}}{2}&\\frac{\\sqrt{2}}{2}\\\\\n-\\frac{\\sqrt{2}}{2}&-\\frac{\\sqrt{2}}{2}\\end{array}\\right)\n\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) +\n\\left(\\begin{array}{c}1-\\frac{\\sqrt{2}}{4}\\\\\\frac{\\sqrt{2}}{4}\\end{array}\\right).\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>02 - Transformations du plan</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/TransPlan/TransPlan.html#question-3",
+    "href": "exercices/TransPlan/TransPlan.html#question-3",
+    "title": "02 - Transformations du plan",
+    "section": "Question 3",
+    "text": "Question 3\nTrouvez l’expression analytique d’une application affine qui envoie le triangle de sommets \\(A = (-11,3),B = (1,12)\\) et \\(C = (-1,14)\\) sur le triangle de sommets \\(P = (90,-68), Q = (69,-53)\\) et \\(R = (83,-59).\\) On sous-entend ici que le point \\(A\\) est envoyé sur \\(P\\), le point \\(B\\) sur \\(Q\\) et le point \\(C\\) sur \\(R.\\) Il serait souhaitable d’utiliser un outil informatique pour faire les calculs.\n\nSolution. L’expression analytique de la transformation cherchée est :\n\\[\nw\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) =\n\\left(\\begin{array}{cc}-4&3\\\\2&-1\\end{array}\\right)\n\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) +\n\\left(\\begin{array}{c}37\\\\-43\\end{array}\\right).\n\\]\nImposition des conditions\nIl faut déterminer \\(a, b, c, d, e\\) et \\(f\\) tels que la transformation\n\\[\nw\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) =\n\\left(\\begin{array}{cc}a & b \\\\ c & d\\end{array}\\right)\n\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) +\n\\left(\\begin{array}{c}e\\\\f\\end{array}\\right)\n\\]\nsoit telle que \\(w(A) = P\\), \\(w(B) = Q\\) et \\(w(C) = R\\). Ces trois conditions se traduisent :\n\\[\nw\\left(\\begin{array}{c}-11\\\\3\\end{array}\\right) =\n\\left(\\begin{array}{cc}a & b \\\\ c & d\\end{array}\\right)\n\\left(\\begin{array}{c}-11\\\\3\\end{array}\\right) +\n\\left(\\begin{array}{c}e\\\\f\\end{array}\\right) =\n\\left(\\begin{array}{c}90\\\\-68\\end{array}\\right),\n\\]\n\\[\nw\\left(\\begin{array}{c}1\\\\12\\end{array}\\right) =\n\\left(\\begin{array}{cc}a & b \\\\ c & d\\end{array}\\right)\n\\left(\\begin{array}{c}1\\\\12\\end{array}\\right) +\n\\left(\\begin{array}{c}e\\\\f\\end{array}\\right) =\n\\left(\\begin{array}{c}69\\\\-53\\end{array}\\right),\n\\]\n\\[\nw\\left(\\begin{array}{c}-1\\\\14\\end{array}\\right) =\n\\left(\\begin{array}{cc}a & b \\\\ c & d\\end{array}\\right)\n\\left(\\begin{array}{c}-1\\\\14\\end{array}\\right) +\n\\left(\\begin{array}{c}e\\\\f\\end{array}\\right) =\n\\left(\\begin{array}{c}83\\\\-59\\end{array}\\right),\n\\]\nqui, sous forme d’équations, s’écrivent :\n\\[\n\\begin{align}\n-11a + 3b + e &= 90, \\\\\n-11c + 3d + f &= -68, \\\\\na + 12b + e &= 69, \\\\\nc + 12d + f &= -53, \\\\\n-a + 14b + e &= 83, \\\\\n-c + 14d + f &= -59.\n\\end{align}\n\\]\nRésolution des systèmes\nOn considère d’abord le système formé des équations ne contenant que les nombres \\(a,b\\) et \\(e\\) :\n\\[\n\\begin{aligned}\n-11a + 3b + e &= 90,\\\\\na + 12b + e &= 69,\\\\\n-a + 14b + e &= 83.\n\\end{aligned}\n\\]\nPar la suite, on traite le système formé des équations ne contenant que les nombres \\(c,d\\) et \\(f\\) :\n\\[\n\\begin{align}\n-11c + 3d + f &= -68,\\\\\nc + 12d + f &= -53,\\\\\n-c + 14d + f &= -59.\n\\end{align}\n\\]\nLe premier système nous donne \\(a = -4\\), \\(b = 3\\) et \\(e = 37\\), et le second conduit à \\(c = 2\\), \\(d = -1\\) et \\(f = -43\\). Ainsi, la transformation cherchée est :\n\\[\nw\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) =\n\\left(\\begin{array}{cc}-4 & 3 \\\\ 2 & -1\\end{array}\\right)\n\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) +\n\\left(\\begin{array}{c}37\\\\-43\\end{array}\\right).\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>02 - Transformations du plan</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/TransPlan/TransPlan.html#question-4",
+    "href": "exercices/TransPlan/TransPlan.html#question-4",
+    "title": "02 - Transformations du plan",
+    "section": "Question 4",
+    "text": "Question 4\nTrouvez l’image du point de coordonnées \\((x,y)\\) par une homothétie de centre \\((h,k)\\) et de rapport \\(c\\). (Suggestion : translatez d’abord le point \\((x,y)\\) selon le vecteur \\((-h,-k)\\) avant d’effectuer l’homothétie, puis translatez le point obtenu selon le vecteur \\((h,k)\\).)\n\nSolution. C’est le point de coordonnées \\(\\left(cx+h(1-c), cy+k(1-c)\\right)\\).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>02 - Transformations du plan</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/TransPlan/TransPlan.html#question-5",
+    "href": "exercices/TransPlan/TransPlan.html#question-5",
+    "title": "02 - Transformations du plan",
+    "section": "Question 5",
+    "text": "Question 5\nTrouvez deux similitudes qui envoient le segment \\(\\mathcal{S}\\), reliant les points \\(P = (-3,-1)\\) et \\(Q = (-1,1)\\), sur le segment \\(\\mathcal{T}\\), reliant les points \\(A = (3,1)\\) et \\(B = (2,2)\\). On sous-entend ici que le point \\(P\\) est envoyé sur \\(A\\), et le point \\(Q\\) sur \\(B\\).\n\nSolution. Les expressions analytiques des deux similitudes cherchées sont les suivantes :\n\\[\nw_1\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) =\n\\left(\\begin{array}{cc}0&-\\frac{1}{2}\\\\\\frac{1}{2}&0\\end{array}\\right)\n\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) +\n\\left(\\begin{array}{c}\\frac{5}{2}\\\\\\frac{5}{2}\\end{array}\\right),\n\\]\n\\[\nw_2\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) =\n\\left(\\begin{array}{cc}-\\frac{1}{2}&0\\\\0&\\frac{1}{2}\\end{array}\\right)\n\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) +\n\\left(\\begin{array}{c}\\frac{3}{2}\\\\\\frac{3}{2}\\end{array}\\right).\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>02 - Transformations du plan</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/TransPlan/TransPlan.html#question-6",
+    "href": "exercices/TransPlan/TransPlan.html#question-6",
+    "title": "02 - Transformations du plan",
+    "section": "Question 6",
+    "text": "Question 6\nTrouvez l’expression analytique de la transformation affine correspondant à la projection orthogonale sur la droite d’équation \\(y = x\\).\n\nSolution. Si \\(w\\) désigne la projection orthogonale sur la droite d’équation \\(y = x\\), alors\n\\[\nw\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) =\n\\left(\\begin{array}{cc}\\frac{1}{2}&\\frac{1}{2}\\\\\\frac{1}{2}&\\frac{1}{2}\\end{array}\\right)\n\\left(\\begin{array}{c}x\\\\y\\end{array}\\right).\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>02 - Transformations du plan</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/TransPlan/TransPlan.html#question-7",
+    "href": "exercices/TransPlan/TransPlan.html#question-7",
+    "title": "02 - Transformations du plan",
+    "section": "Question 7",
+    "text": "Question 7\nSoient \\(a,b,r\\in]0,\\infty[\\), et \\(e,f\\in\\mathbb{R}\\). Considérons l’application affine \\(w:\\mathbb{R}^2\\to \\mathbb{R}^2\\) dont l’expression analytique est donnée par\n\\[\nw\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) =\n\\left(\\begin{array}{cc}a&0\\\\0&b\\end{array}\\right)\n\\left(\\begin{array}{c}x\\\\y\\end{array}\\right) +\n\\left(\\begin{array}{c}e\\\\f\\end{array}\\right).\n\\]\nQuelle est l’équation du lieu des points de \\(\\mathbb{R}^2\\) correspondant à l’image du cercle d’équation \\(x^2 + y^2 = r^2\\) par \\(w\\) ?\n\nSolution. Il s’agit d’une ellipse d’équation\n\\[\n\\frac{(x-e)^2}{(ar)^2} + \\frac{(y-f)^2}{(br)^2} = 1,\n\\]\nc’est-à-dire une ellipse centrée au point \\((e,f)\\) dont l’axe horizontal est de longueur \\(2ar\\) et dont l’axe vertical est de longueur \\(2br\\).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>02 - Transformations du plan</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/TransPlan/TransPlan.html#question-8",
+    "href": "exercices/TransPlan/TransPlan.html#question-8",
+    "title": "02 - Transformations du plan",
+    "section": "Question 8",
+    "text": "Question 8\nOn considère le triangle rectangle \\(\\mathcal{T}:=\\Delta BAC\\) illustré ci-dessous dont les côtés sont de longueur \\(a, b\\) et \\(c\\). Le triangle \\(\\mathcal{T}\\) est l’union des triangles rectangles \\(\\mathcal{T}_1:=\\Delta ADC\\) et \\(\\mathcal{T}_2:=\\Delta BDC\\).\n\n\n\nIllustration du triangle rectangle\n\n\n\nMontrez que \\(\\mathcal{T}_1\\) et \\(\\mathcal{T}_2\\) sont semblables à \\(\\mathcal{T}\\).\nD’après (a), il existe des similitudes \\(w_1\\) et \\(w_2\\) telles que \\(w_1(\\mathcal{T})=\\mathcal{T}_1\\) et \\(w_2(\\mathcal{T})=\\mathcal{T}_2\\). Soient \\(k_1\\) et \\(k_2\\), les rapports de similitude de \\(w_1\\) et \\(w_2\\) respectivement. Déterminez les valeurs de \\(k_1\\) et \\(k_2\\).\n\nSolution. On trouve que \\(k_1 = \\frac{a}{c}\\) et \\(k_2 = \\frac{b}{c}\\).\n\nMontrez que si \\(\\mathcal{A}\\) et \\(\\mathcal{B}\\) sont deux triangles semblables tels que \\(\\mathcal{B}=w(\\mathcal{A})\\), où \\(w\\) est une similitude de rapport \\(k\\), alors Aire(\\(\\mathcal{B}\\))=\\(k^2\\)Aire(\\(\\mathcal{A}\\)).\nDésignons par \\(s, s_1\\) et \\(s_2\\) les aires des triangles \\(\\mathcal{T}, \\mathcal{T}_1\\) et \\(\\mathcal{T}_2\\) respectivement. Utiliser ce qui précède, et l’égalité \\(s = s_1 + s_2\\) pour démontrer le théorème de Pythagore.\nTrouvez un ensemble \\(\\mathcal{E}\\) tel que \\(w_1(\\mathcal{E})\\cup w_2(\\mathcal{E})=\\mathcal{E}\\).\n\nSolution. On vérifie que \\(\\mathcal{E} = \\mathcal{T}\\) fait l’affaire.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>02 - Transformations du plan</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/EspacesMet/EspacesMet.html",
+    "href": "exercices/EspacesMet/EspacesMet.html",
+    "title": "03 - Espaces métriques",
+    "section": "",
+    "text": "Question 1\nSoit \\(P(x_1,y_1)\\) et \\(Q(x_2,y_2)\\) des éléments de \\(\\mathbb{R}^2\\). Déterminez si les fonctions suivantes sont des métriques sur \\(\\mathbb{R}^2\\). Dans chacun des cas, justifiez votre réponse.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03 - Espaces métriques</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/EspacesMet/EspacesMet.html#question-1",
+    "href": "exercices/EspacesMet/EspacesMet.html#question-1",
+    "title": "03 - Espaces métriques",
+    "section": "",
+    "text": "\\(d(P,Q) = |x_1-x_2| + |y_1-y_2|\\)\n\nSolution. Oui, c’est la distance euclidienne.\n\n\\(d(P,Q) = |x_1-x_2| \\cdot |y_1-y_2|\\)\n\nSolution. Non, par exemple \\(d((1,0),(1,1))=0\\) alors que les points \\((1,0)\\) et \\((1,1)\\) sont distincts. Cela contredit la propriété d’une métrique voulant que \\(d(P,Q)=0\\Rightarrow P=Q\\).\n\n\\(d(P,Q) = |x_1+x_2| + |y_1+y_2|\\)\n\nSolution. Non, par exemple \\(d((1,0),(-1,0))=0\\) alors que les points \\((1,0)\\) et \\((-1,0)\\) sont distincts. Cela contredit la propriété d’une métrique voulant que \\(d(P,Q)=0\\Rightarrow P=Q\\).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03 - Espaces métriques</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/EspacesMet/EspacesMet.html#question-2",
+    "href": "exercices/EspacesMet/EspacesMet.html#question-2",
+    "title": "03 - Espaces métriques",
+    "section": "Question 2",
+    "text": "Question 2\nSoit l’espace métrique \\(\\left(\\mathbb{R}^2,d\\right)\\), où \\(d\\) est la métrique définie par \\[\nd\\left((x_1,y_1),(x_2,y_2)\\right) = |x_1-x_2| + 2|y_1-y_2|.\n\\] Dessinez la boule ouverte centrée à l’origine de rayon \\(r\\).\n\nSolution. L’intérieur du losange de sommets \\(\\left(0,\\frac{1}{2}\\right), \\left(1,0\\right), \\left(0,-\\frac{1}{2}\\right), \\left(-1,0\\right)\\).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03 - Espaces métriques</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/EspacesMet/EspacesMet.html#question-3",
+    "href": "exercices/EspacesMet/EspacesMet.html#question-3",
+    "title": "03 - Espaces métriques",
+    "section": "Question 3",
+    "text": "Question 3\nEst-ce que l’espace métrique \\(\\left(\\mathbb{R} \\setminus \\mathbb{Q}, d_E\\right)\\) est complet? Justifiez.\n\nSolution. Non. Il suffit de considérer une suite de nombres irrationnels qui converge vers un nombre rationnels. Par exemple, la suite \\((x_n)\\) où \\(x_n=\\frac{\\sqrt{2}}{n}\\) est une suite de Cauchy dans \\(\\mathbb{R} \\setminus \\mathbb{Q}\\) qui converge vers \\(0\\), un nombre qui n’est pas dans cet ensemble.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03 - Espaces métriques</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/EspacesMet/EspacesMet.html#question-4",
+    "href": "exercices/EspacesMet/EspacesMet.html#question-4",
+    "title": "03 - Espaces métriques",
+    "section": "Question 4",
+    "text": "Question 4\nDonnez le terme général d’une suite \\((x_n)\\) de nombres rationnels qui converge vers \\(\\sqrt{2}\\), faisant de \\(\\left(\\mathbb{Q}, d_E\\right)\\) un espace métrique qui n’est pas complet.\n\nSolution. Plusieurs réponses possibles, le graphe de la fonction \\(f(x)=x^2-2\\) et la construction de tangentes bien choisies peut vous suggérer une méthode.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03 - Espaces métriques</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/EspacesMet/EspacesMet.html#question-5",
+    "href": "exercices/EspacesMet/EspacesMet.html#question-5",
+    "title": "03 - Espaces métriques",
+    "section": "Question 5",
+    "text": "Question 5\nVrai ou faux avec justification. Soit \\((x_n)\\) une suite dans un espace métrique \\(\\left(E,d\\right)\\). Si \\[\nd(x_n,a) &lt; \\frac{1}{n} \\text{ pour tout } n \\geq 1000,\n\\] alors \\(a \\in E\\).\n\nSolution. Faux, la suite considérée à la question 3 fourni un contre-exemple.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03 - Espaces métriques</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/EspacesMet/EspacesMet.html#question-6",
+    "href": "exercices/EspacesMet/EspacesMet.html#question-6",
+    "title": "03 - Espaces métriques",
+    "section": "Question 6",
+    "text": "Question 6\nPour chacun des ensembles ci-dessous, considérés dans l’espace métrique \\(\\left(\\mathbb{R}^2, d_E\\right)\\), déterminez lesquelles des caractéristiques suivantes sont possédées par l’ensemble : Fermé, Ouvert, Borné, Compact. Donnez aussi une représentation graphique de l’ensemble.\n\n\\(\\left\\{(x,y)\\in\\mathbb{R}^2 : -1 &lt; x &lt; 1 ~\\text{et}~ 0 \\leq y \\leq 1\\right\\}\\)\n\nSolution. Borné\n\n\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Création de la figure et des axes\nfig, ax = plt.subplots(figsize=(6, 6))\n\n# Dessiner la région remplie entre x = -1 et x = 1, y entre 0 et 1\nx_fill = np.linspace(-1, 1, 1000)  # Points pour remplir le rectangle\ny_bottom = np.zeros_like(x_fill)   # Bas de la région y = 0\ny_top = np.ones_like(x_fill)       # Haut de la région y = 1\n\nax.fill_between(x_fill, y_bottom, y_top, where=(x_fill &gt; -1) & (x_fill &lt; 1),\ncolor='skyblue', alpha=0.5, label='-1 &lt; x &lt; 1, 0 ≤ y ≤ 1')\n\n# Tracer les segments horizontaux (inclus dans l'ensemble)\nax.hlines(y=0, xmin=-1, xmax=1, color='blue', linestyle='-', linewidth=2)\nax.hlines(y=1, xmin=-1, xmax=1, color='blue', linestyle='-', linewidth=2)\n\n# Tracer les lignes verticales pointillées aux limites x = -1 et x = 1 dans y ∈ [0, 1]\ny_vertical = np.linspace(0, 1, 100)  # y de 0 à 1\nax.plot([-1] * len(y_vertical), y_vertical, 'b--', linewidth=2)  # x = -1\nax.plot([1] * len(y_vertical), y_vertical, 'b--', linewidth=2)   # x = 1\n\n# Ajouter les axes x et y qui s'intersectent en (0,0)\nax.axhline(0, color='black', linewidth=1)  # Axe des x\nax.axvline(0, color='black', linewidth=1)  # Axe des y\n\n# Configuration des limites et des graduations\nax.set_xlim(-1.5, 1.5)\nax.set_ylim(-0.5, 1.5)\nax.set_xticks(np.arange(-1.5, 1.6, 0.5))  # Graduations sur x\nax.set_yticks(np.arange(-0.5, 1.6, 0.5))  # Graduations sur y\n\n# Étiquettes des axes\nax.set_xlabel('$x$', fontsize=12)\nax.set_ylabel('$y$', fontsize=12)\nax.set_title(r\"Ensemble : $-1 &lt; x &lt; 1$ et $0 \\leq y \\leq 1$\", fontsize=14)\n\n# Affichage de la grille pour une meilleure lisibilité\nax.grid(True, linestyle='--', alpha=0.5)\n\n# Affichage du graphique\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\\(\\left\\{(x,y)\\in\\mathbb{R}^2 : y = x^2\\right\\}\\)\n\nSolution. Fermé\n\n\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Création de la figure et des axes\nfig, ax = plt.subplots(figsize=(6, 6))\n\n# Définir les données pour la parabole y = x^2\nx = np.linspace(-3, 3, 1000)  # Points entre -3 et 3\ny = x**2  # Parabole\n\n# Tracer la parabole\nax.plot(x, y, color='blue', linewidth=2)\n\n# Ajouter les axes x et y qui s'intersectent en (0, 0)\nax.axhline(0, color='black', linewidth=1)  # Axe des x\nax.axvline(0, color='black', linewidth=1)  # Axe des y\n\n# Configuration des limites et des graduations\nax.set_xlim(-3.5, 3.5)\nax.set_ylim(-0.5, 10)\nax.set_xticks(np.arange(-3, 4, 1))  # Graduations sur x\nax.set_yticks(np.arange(0, 11, 2))  # Graduations sur y\n\n# Étiquettes des axes\nax.set_xlabel('$x$', fontsize=12)\nax.set_ylabel('$y$', fontsize=12)\nax.set_title(r\"Parabole $y = x^2$\", fontsize=14)\n\n\n# Affichage de la grille pour une meilleure lisibilité\nax.grid(True, linestyle='--', alpha=0.5)\n\n# Affichage du graphique\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\\(\\left\\{(x,y)\\in\\mathbb{R}^2 : |x| = |y| ~\\text{et}~ -1 \\leq x \\leq 1\\right\\}\\)\n\nSolution. Borné, fermé et compact\n\n\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Création de la figure et des axes\nfig, ax = plt.subplots(figsize=(6, 6))\n\nx = np.linspace(-1, 1, 1000)  # Points entre -3 et 3\ny = x\n\n# Tracer la parabole\nax.plot(x, y, color='blue', linewidth=2)\ny=-x\nax.plot(x, y, color='blue', linewidth=2)\n\n# Ajouter les axes x et y qui s'intersectent en (0, 0)\nax.axhline(0, color='black', linewidth=1)  # Axe des x\nax.axvline(0, color='black', linewidth=1)  # Axe des y\n\n# Configuration des limites et des graduations\nax.set_xlim(-1.5, 1.5)\nax.set_ylim(-1.5, 1.5)\nax.set_xticks(np.arange(-1, 1, 1))  # Graduations sur x\nax.set_yticks(np.arange(-1, 1, 1))  # Graduations sur y\n\n# Étiquettes des axes\nax.set_xlabel('$x$', fontsize=12)\nax.set_ylabel('$y$', fontsize=12)\n\n# Affichage de la grille pour une meilleure lisibilité\nax.grid(True, linestyle='--', alpha=0.5)\n\n# Affichage du graphique\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\\(\\left\\{(x,y)\\in\\mathbb{R}^2 : 0 &lt; y &lt; 1\\right\\}\\)\n\nSolution. Ouvert\n\n\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Création de la figure et des axes\nfig, ax = plt.subplots(figsize=(6, 6))\n\n# Dessiner la région remplie entre x = -1 et x = 1, y entre 0 et 1\nx_fill = np.linspace(-2, 2, 1000)  # Points pour remplir le rectangle\ny_bottom = np.zeros_like(x_fill)   # Bas de la région y = 0\ny_top = np.ones_like(x_fill)       # Haut de la région y = 1\n\nax.fill_between(x_fill, y_bottom, y_top, where=(x_fill &gt; -2) & (x_fill &lt; 2),\ncolor='skyblue', alpha=0.5, label='0 &lt; y &lt; 1')\n\n# Tracer les segments horizontaux (inclus dans l'ensemble)\nax.hlines(y=0, xmin=-2, xmax=2, color='blue', linestyle='--', linewidth=2)\nax.hlines(y=1, xmin=-2, xmax=2, color='blue', linestyle='--', linewidth=2)\n\n# Tracer les lignes verticales pointillées aux limites x = -1 et x = 1 dans y ∈ [0, 1]\n #  y_vertical = np.linspace(0, 1, 100)  # y de 0 à 1\n #  ax.plot([-1] * len(y_vertical), y_vertical, 'b--', linewidth=2)  # x = -1\n #  ax.plot([1] * len(y_vertical), y_vertical, 'b--', linewidth=2)# x = 1\n\n# Ajouter les axes x et y qui s'intersectent en (0,0)\nax.axhline(0, color='black', linewidth=1)  # Axe des x\nax.axvline(0, color='black', linewidth=1)  # Axe des y\n\n# Configuration des limites et des graduations\nax.set_xlim(-2, 2)\nax.set_ylim(-0.5, 1.5)\nax.set_xticks(np.arange(-1.5, 1.6, 0.5))  # Graduations sur x\nax.set_yticks(np.arange(-0.5, 1.6, 0.5))  # Graduations sur y\n\n# Étiquettes des axes\nax.set_xlabel('$x$', fontsize=12)\nax.set_ylabel('$y$', fontsize=12)\n\n# Affichage de la grille pour une meilleure lisibilité\nax.grid(True, linestyle='--', alpha=0.5)\n\n# Affichage du graphique\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\\(\\left\\{(x,y)\\in\\mathbb{R}^2 : |x|+|y| &lt; 1\\right\\}\\)\n\nSolution. Ouvert et borné\n\n\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Création de la figure et des axes\nfig, ax = plt.subplots(figsize=(6, 6))\n\n# Générer les points pour tracer la frontière |x| + |y| = 1\nx = np.linspace(-1, 1, 500)  # Intervalle pour x\ny1 = 1 - np.abs(x)           # y positif pour la frontière\ny2 = -(1 - np.abs(x))        # y négatif pour la frontière\n\n# Tracer la région remplie à l'intérieur de la frontière\nx_fill = np.linspace(-1, 1, 500)\nfor x_i in x_fill:\n   ax.fill_between([x_i], -(1 - abs(x_i)), 1 - abs(x_i), color='skyblue', alpha=0.5)\n\n# Tracer la frontière en pointillés (|x| + |y| = 1)\nax.plot(x, y1, 'b--', linewidth=2)  # Partie supérieure\nax.plot(x, y2, 'b--', linewidth=2)  # Partie inférieure\n\n# Ajouter les axes x et y qui s'intersectent en (0,0)\nax.axhline(0, color='black', linewidth=1)  # Axe des x\nax.axvline(0, color='black', linewidth=1)  # Axe des y\n\n# Configuration des limites et des graduations\nax.set_xlim(-1.2, 1.2)\nax.set_ylim(-1.2, 1.2)\nax.set_xticks(np.arange(-1, 1.1, 0.5))  # Graduations sur x\nax.set_yticks(np.arange(-1, 1.1, 0.5))  # Graduations sur y\n\n# Étiquettes des axes\nax.set_xlabel('$x$', fontsize=12)\nax.set_ylabel('$y$', fontsize=12)\nax.set_title(r\"Région : $|x| + |y| &lt; 1$\", fontsize=14)\n\n# Affichage de la grille pour une meilleure lisibilité\nax.grid(True, linestyle='--', alpha=0.5)\n\n# Affichage du graphique\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\\(\\left\\{(x,y)\\in\\mathbb{R}^2 : x^2 + y^2 = 1\\right\\}\\)\n\nSolution. Borné, fermé et compact\n\n\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Création de la figure et des axes\nfig, ax = plt.subplots(figsize=(6, 6))\n\n# Paramètres pour tracer le cercle x^2 + y^2 = 1\ntheta = np.linspace(0, 2 * np.pi, 1000)  # Paramètre pour la circonférence\nx = np.cos(theta)  # Coordonnées x sur le cercle\ny = np.sin(theta)  # Coordonnées y sur le cercle\n\n# Tracer la frontière du cercle en pointillés\nax.plot(x, y, linestyle='-', color='blue', linewidth=2, label=r'$x^2 + y^2 = 1$')\n\n# Ajouter les axes x et y qui s'intersectent en (0,0)\nax.axhline(0, color='black', linewidth=1)  # Axe des x\nax.axvline(0, color='black', linewidth=1)  # Axe des y\n\n# Configuration des limites et des graduations\nax.set_xlim(-1.5, 1.5)\nax.set_ylim(-1.5, 1.5)\nax.set_aspect('equal')  # Assure un repère orthonormé\nax.set_xticks(np.arange(-1.5, 1.6, 0.5))  # Graduations sur x\nax.set_yticks(np.arange(-1.5, 1.6, 0.5))  # Graduations sur y\n\n# Étiquettes des axes et titre\nax.set_xlabel('$x$', fontsize=12)\nax.set_ylabel('$y$', fontsize=12)\nax.set_title(r\"Frontière : $x^2 + y^2 = 1$\", fontsize=14)\n\n# Affichage de la grille pour une meilleure lisibilité\nax.grid(True, linestyle='--', alpha=0.5)\n\n# Affichage du graphique\nplt.show()",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03 - Espaces métriques</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/EspacesMet/EspacesMet.html#question-7",
+    "href": "exercices/EspacesMet/EspacesMet.html#question-7",
+    "title": "03 - Espaces métriques",
+    "section": "Question 7",
+    "text": "Question 7\nSoit \\((E,d)\\) un espace métrique et soit \\(f:E\\rightarrow E\\), une contration. Montrez que \\(f\\) est continue. Rappelons qu’un fonction \\(f\\) est continue en \\(x_0\\) si pour tout \\(\\varepsilon&gt;0\\), il existe \\(\\delta&gt;0\\) tel que \\[x\\in E~\\text{et}~d(x_0,x)&lt;\\delta\\Rightarrow d(f(x_0),f(x))&lt;\\varepsilon.\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03 - Espaces métriques</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/EspacesMet/EspacesMet.html#question-8",
+    "href": "exercices/EspacesMet/EspacesMet.html#question-8",
+    "title": "03 - Espaces métriques",
+    "section": "Question 8",
+    "text": "Question 8\nAssurez-vous de pouvoir définir sans aide chacun des objets mathématiques ci-dessous. Vérifiez vos réponses dans les notes de cours.\n\nUne contraction sur \\(\\left(\\mathbb{R}^2,d_E\\right)\\).\nUn sous-ensemble borné de \\(\\left(\\mathbb{R}^2,d_E\\right)\\).\nUn sous-ensemble fermé de \\(\\left(\\mathbb{R}^2,d_E\\right)\\).\nUn sous-ensemble compact de \\(\\left(\\mathbb{R}^2,d_E\\right)\\).\nUne métrique sur un ensemble \\(X\\).\nUn espace métrique.\nUne suite de Cauchy dans un espace métrique \\((X,d)\\).\nUn espace métrique complet.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03 - Espaces métriques</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PtFixes/PtFixes.html",
+    "href": "exercices/PtFixes/PtFixes.html",
+    "title": "04 - Les points fixes",
+    "section": "",
+    "text": "Question 1\nTrouvez les points fixes des fonctions ci-dessous.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>04 - Les points fixes</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PtFixes/PtFixes.html#question-1",
+    "href": "exercices/PtFixes/PtFixes.html#question-1",
+    "title": "04 - Les points fixes",
+    "section": "",
+    "text": "\\(f(x) = x^3\\)\n\\(f(x, y) = (2x + y, x - y)\\)\nLa fonction de \\(\\mathbb{R}^2\\) vers \\(\\mathbb{R}^2\\) définie par \\(R_a \\circ R_b\\), où \\(a\\) est la droite \\(y = x\\) et \\(b\\) la droite \\(y = 3 - x\\).\nLa fonction \\(\\lfloor x \\rfloor\\).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>04 - Les points fixes</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PtFixes/PtFixes.html#question-2",
+    "href": "exercices/PtFixes/PtFixes.html#question-2",
+    "title": "04 - Les points fixes",
+    "section": "Question 2",
+    "text": "Question 2\n\nUn seul polynôme possède une infinité de points fixes. Lequel ?\nExpliquez pourquoi un polynôme de degré \\(n \\geq 2\\) possède au plus \\(n\\) points fixes.\nPour chaque \\(n \\in \\mathbb{N}^{\\star}\\), trouvez un polynôme de degré \\(n\\) qui possède \\(n\\) points fixes.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>04 - Les points fixes</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PtFixes/PtFixes.html#question-3",
+    "href": "exercices/PtFixes/PtFixes.html#question-3",
+    "title": "04 - Les points fixes",
+    "section": "Question 3",
+    "text": "Question 3\nVrai ou faux avec justification : si \\(1\\) est une valeur propre de la matrice \\(A\\), alors la fonction de \\(\\mathbb{R}^2\\) dans \\(\\mathbb{R}^2\\) définie par \\(f(\\vec{x}) = A\\vec{x}\\) possède au moins un point fixe.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>04 - Les points fixes</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/SIF/SIF.html",
+    "href": "exercices/SIF/SIF.html",
+    "title": "05 - Les SIF",
+    "section": "",
+    "text": "Question 1\nPour chacune des paires d’ensembles ci-dessous, trouvez \\(d_H(A,B)\\), où \\(d_H\\) est la distance de Hausdorff.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>05 - Les SIF</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/SIF/SIF.html#question-1",
+    "href": "exercices/SIF/SIF.html#question-1",
+    "title": "05 - Les SIF",
+    "section": "",
+    "text": "\\(A = \\{(x_1,y_1)\\}\\) et \\(B = \\{(x_2,y_2)\\}\\).\n\nSolution. \\(\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\\)\n\n\\(A = \\{(1,1)\\}\\) et \\(B = \\{(x,y) : x^2 + y^2 \\leq r^2\\}\\).\n\nSolution. \\(r + \\sqrt{2}\\)\n\n\\(A = \\{(x,0) : -1 \\leq x \\leq 1\\}\\) et \\(B = \\{(0,y) : -2 \\leq y \\leq 2\\}\\).\n\nSolution. \\(2\\)\n\n\\(A = \\{(x,y) : (x - h_1)^2 + (y - k_1)^2 \\leq r_1^2\\}\\) et \\(B = \\{(x,y) : (x - h_2)^2 + (y - k_2)^2 \\leq r_2^2\\}\\).\n\nSolution. \\(\\sqrt{(h_2 - h_1)^2 + (k_2 - k_1)^2} + |r_2 - r_1|\\)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>05 - Les SIF</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/SIF/SIF.html#question-2",
+    "href": "exercices/SIF/SIF.html#question-2",
+    "title": "05 - Les SIF",
+    "section": "Question 2",
+    "text": "Question 2\nUn SIF est formé de deux similitudes de rapport \\(\\frac{1}{2}\\), et de trois similitudes de rapport \\(\\frac{1}{4}\\).\n\nQuel est le rapport de contraction du SIF ?\n\nSolution. \\(\\frac{1}{2}\\)\n\nQuelle est la dimension de similitude généralisée de l’attracteur du SIF ?\n\nSolution. \\(\\frac{\\ln 3}{\\ln 2}\\)\n\nSi le SIF avait plutôt été formé de deux contractions de rapport \\(\\frac{1}{2}\\), et de trois contractions de rapport \\(\\frac{1}{3}\\), quelle aurait été la dimension de similitude généralisée de son attracteur ?\n\nSolution. On ne peut trouver la valeur exacte. Une valeur approchée serait \\(d \\approx 1{,}788\\).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>05 - Les SIF</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/SIF/SIF.html#ques-fractals",
+    "href": "exercices/SIF/SIF.html#ques-fractals",
+    "title": "05 - Les SIF",
+    "section": "Question 3",
+    "text": "Question 3\nPour chacun des ensembles \\(E\\) autosimilaires ci-dessous :\n\nTrouvez les transformations \\(w_i\\) telles que \\(E\\) est l’attracteur du SIF \\(\\{w_i\\}_{i \\in J}\\), où \\(J = \\{1,2,\\ldots,n\\}\\) pour un certain \\(n \\in \\mathbb{N}\\);\nUtilisez un ordinateur pour construire une image qui ressemble à \\(E\\);\nTrouvez, si elle existe, la dimension de similitude de \\(E\\);\nTrouvez, si elle existe, la dimension de similitude généralisée de \\(E\\).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>05 - Les SIF</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/SIF/SIF.html#question-4",
+    "href": "exercices/SIF/SIF.html#question-4",
+    "title": "05 - Les SIF",
+    "section": "Question 4",
+    "text": "Question 4\nSoit \\(\\mathcal{S}\\) le SIF dont l’attracteur est représenté ci-dessous.\n\n\n\nFractale\n\n\n\nTrouvez 3 fonctions \\(f_1, f_2\\) et \\(f_3\\) telles que \\(\\mathcal{S} = \\{f_1,f_2,f_3\\}\\).\n\nSolution. On trouve que \\[\nf_1\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} \\frac{1}{2} & 0 \\\\ 0 & \\frac{1}{2} \\end{pmatrix} \\begin{pmatrix} x \\\\ y    \\end{pmatrix}, \\quad\nf_2\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} \\frac{1}{2} & 0 \\\\ 0 & \\frac{1}{2} \\end{pmatrix} \\begin{pmatrix} x \\\\ y  \\end{pmatrix} + \\begin{pmatrix} 8 \\\\ 0 \\end{pmatrix}.\n\\] Pour \\(f_3\\), c’est la composée d’une rotation \\(r\\), d’une contraction \\(c\\) et d’une translation \\(t\\). Ainsi, \\[\nf_3\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} 0 & -\\frac{4}{5} \\\\ \\frac{5}{16} & 0 \\end{pmatrix} \\begin{pmatrix} x \\\\ y    \\end{pmatrix} + \\begin{pmatrix} 16 \\\\ 5 \\end{pmatrix}.\n\\]\n\nQuelle est la dimension de similitude généralisée de \\(A\\)?\n\nSolution. Dans cette situation, nous ne sommes pas en mesure de déterminer la dimension de similitude de cet ensemble, ni même la dimension de similitude généralisée. En effet, l’une des transformations n’est pas une similitude.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>05 - Les SIF</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/SIF/SIF.html#question-5",
+    "href": "exercices/SIF/SIF.html#question-5",
+    "title": "05 - Les SIF",
+    "section": "Question 5",
+    "text": "Question 5\nConsidérons le SIF formé des contractions \\[\nw_1\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\frac{1}{3} \\begin{pmatrix} x \\\\ y \\end{pmatrix}, \\quad\nw_2\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\frac{1}{3} \\begin{pmatrix} x \\\\ y \\end{pmatrix} + \\begin{pmatrix} \\frac{2}{3} \\\\ 0 \\end{pmatrix}.\n\\]\nSoit \\(C = \\{(x,y) : x,y \\in [0,1]\\}\\).\n\nReprésentez \\(C\\) dans le plan.\n\nSolution. \n\n\n\nEnsemble C\n\n\n\nTrouvez \\(W(C)\\) et le représenter dans le plan.\n\nSolution. \n\n\n\nEnsemble W(C)\n\n\n\nTrouvez \\(W^{2}(C)\\) et le représenter dans le plan.\n\nSolution. \n\n\n\nEnsemble \\(W^{2}(C)\\)\n\n\n\nQue vaut \\(d_H(W(C),C)\\)?\n\nSolution. Du dessin ci-dessous, on déduit que \\(d_H(W(C),C) = \\frac{\\sqrt{17}}{6}\\).\n\n\n\nLe point P est le point de C le plus éloigné des points appartenant à W(C).\n\n\n\nQue vaut le rapport de contraction du SIF ?\n\nSolution. \\(\\frac{1}{3}\\)\n\nSoit \\(A\\) l’attracteur du SIF considéré. Utilisez le théorème de Hutchinson pour trouver une valeur de \\(n\\) telle que \\[\nd_{H}\\left(W^{n}(C),A\\right) \\leq 0{,}01.\n\\]\n\nSolution. On doit choisir \\(n \\geq 5\\).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>05 - Les SIF</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/SIF/SIF.html#question-6-défi-facultatif",
+    "href": "exercices/SIF/SIF.html#question-6-défi-facultatif",
+    "title": "05 - Les SIF",
+    "section": "Question 6 (Défi facultatif)",
+    "text": "Question 6 (Défi facultatif)\nRépondez aux sous-questions de la question 3 pour la figure ci-dessous.\n\n\n\nFougère de Barnsley",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>05 - Les SIF</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/NumInfo/NumInfo.html",
+    "href": "exercices/NumInfo/NumInfo.html",
+    "title": "06 - Numération et stockage",
+    "section": "",
+    "text": "Questions sur la représentation des nombres et les images",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>06 - Numération et stockage</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/NumInfo/NumInfo.html#question-1",
+    "href": "exercices/NumInfo/NumInfo.html#question-1",
+    "title": "06 - Numération et stockage",
+    "section": "Question 1",
+    "text": "Question 1\nChacune des chaînes de 8 bits suivantes est associée à un nombre entier entre 0 et 255 selon sa représentation en base 2. Trouvez-le.\n\n00010000\n\nSolution. 16\n\n10101010\n\nSolution. 170\n\n00001111\n\nSolution. 15\n\n11111011\n\nSolution. 251",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>06 - Numération et stockage</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/NumInfo/NumInfo.html#question-2",
+    "href": "exercices/NumInfo/NumInfo.html#question-2",
+    "title": "06 - Numération et stockage",
+    "section": "Question 2",
+    "text": "Question 2\nChacun des nombres entiers entre 0 et 255 peut être représenté par une chaîne de 8 bits à l’aide de sa représentation en base 2. Trouvez les chaînes correspondant à chacun des entiers ci-dessous.\n\n0\n\nSolution. 00000000\n\n21\n\nSolution. 00010101\n\n144\n\nSolution. 10010000\n\n251\n\nSolution. 11111011",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>06 - Numération et stockage</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/NumInfo/NumInfo.html#question-3",
+    "href": "exercices/NumInfo/NumInfo.html#question-3",
+    "title": "06 - Numération et stockage",
+    "section": "Question 3",
+    "text": "Question 3\nChacun des nombres ci-dessous est écrit en base dix. Veuillez écrire ces nombres selon les conventions de la numération en base hexadécimale.\n\n10\n\nSolution. A\n\n100\n\nSolution. 64\n\n243\n\nSolution. F3\n\n9999\n\nSolution. 270F",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>06 - Numération et stockage</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/NumInfo/NumInfo.html#question-4",
+    "href": "exercices/NumInfo/NumInfo.html#question-4",
+    "title": "06 - Numération et stockage",
+    "section": "Question 4",
+    "text": "Question 4\nChaque nombre entier peut être représenté par une chaîne de symboles selon les conventions de la numération en base hexadécimale. Ci-dessous sont représentés des nombres entiers selon ces conventions. Déterminez de quels nombres entiers il s’agit.\n\n123\n\nSolution. 291\n\n1AC\n\nSolution. 428\n\nABBA\n\nSolution. 43 962\n\n9C9A\n\nSolution. 40 090",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>06 - Numération et stockage</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/NumInfo/NumInfo.html#question-5",
+    "href": "exercices/NumInfo/NumInfo.html#question-5",
+    "title": "06 - Numération et stockage",
+    "section": "Question 5",
+    "text": "Question 5\nQuelle sera la taille, en octets d’une chaîne de 16 symboles hexadécimaux ?\n\nSolution. 8 octets",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>06 - Numération et stockage</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/NumInfo/NumInfo.html#question-6",
+    "href": "exercices/NumInfo/NumInfo.html#question-6",
+    "title": "06 - Numération et stockage",
+    "section": "Question 6",
+    "text": "Question 6\nPour chaque type de photo décrit ci-dessous, déterminez quelle sera la taille, en octets, d’une image dont la résolution est \\(1024 \\times 1280\\) pixels.\n\nUne image en noir et blanc seulement.\n\nSolution. 163 840 octets\n\nUne image faisant intervenir 256 tons de gris.\n\nSolution. 1 310 720 octets\n\nUne image dont le mode de description des couleurs est le RGB (Red, Green, Blue), où chacune des composantes de base peut prendre 256 tons différents.\n\nSolution. 3 932 160 octets\n\nL’image en (c) ayant subi une compression de rapport \\(4:1\\).\n\nSolution. 983 040 octets",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>06 - Numération et stockage</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/NumInfo/NumInfo.html#question-7",
+    "href": "exercices/NumInfo/NumInfo.html#question-7",
+    "title": "06 - Numération et stockage",
+    "section": "Question 7",
+    "text": "Question 7\nQuelle est la différence entre une image vectorielle et une image matricielle ?\n\nSolution. Pour une image matricielle, l’information est emmagasinée pixel par pixel. Pour ce qui est de l’image vectorielle, elle est définie par des éléments (ligne, points, courbes, etc.). À chaque fois qu’on visualise une image vectorielle, des calculs sont effectués, ce qui n’est pas le cas des images matricielles. Aussi, une image vectorielle peut être agrandie sans perte de qualité, contrairement aux images matricielles.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>06 - Numération et stockage</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/NumInfo/NumInfo.html#question-8",
+    "href": "exercices/NumInfo/NumInfo.html#question-8",
+    "title": "06 - Numération et stockage",
+    "section": "Question 8",
+    "text": "Question 8\nPourquoi une image en format .BMP est-elle plus volumineuse, à format égal, qu’une image de type .JPEG ?\n\nSolution. Une image en format .BMP est une image matricielle qui n’a subi aucun type de compression. Ainsi, une même quantité d’information décrit chacun des pixels de l’image.\nPour une image en format .JPEG, l’image a été divisée en un certain nombre de blocs, qui dépend du taux de compression, afin de diminuer la taille finale de l’image. On essaie de conserver le plus d’information possible pour les blocs où il y a un grand changement de contraste, et peu pour ceux où il y a uniformité à l’intérieur d’un même bloc de pixels.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>06 - Numération et stockage</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto1/Crypto1.html",
+    "href": "exercices/Crypto1/Crypto1.html",
+    "title": "07 - Cryptographie (1/3)",
+    "section": "",
+    "text": "Question 1\nChiffrez le mot guitare selon la méthode de Jules César.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>07 - Cryptographie (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto1/Crypto1.html#question-1",
+    "href": "exercices/Crypto1/Crypto1.html#question-1",
+    "title": "07 - Cryptographie (1/3)",
+    "section": "",
+    "text": "Solution. JXLWDUH",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>07 - Cryptographie (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto1/Crypto1.html#question-2",
+    "href": "exercices/Crypto1/Crypto1.html#question-2",
+    "title": "07 - Cryptographie (1/3)",
+    "section": "Question 2",
+    "text": "Question 2\nLe mot DXWR a été obtenu après avoir chiffré un message selon la méthode de Jules César. Quel était le message d’origine ?\n\nSolution. auto",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>07 - Cryptographie (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto1/Crypto1.html#question-3",
+    "href": "exercices/Crypto1/Crypto1.html#question-3",
+    "title": "07 - Cryptographie (1/3)",
+    "section": "Question 3",
+    "text": "Question 3\nUn cryptosystème basé sur le décalage chiffre le mot chien en HMNJS. De quelle façon sera chiffré le mot chat ?\n\nSolution. HMFY",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>07 - Cryptographie (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto1/Crypto1.html#question-4",
+    "href": "exercices/Crypto1/Crypto1.html#question-4",
+    "title": "07 - Cryptographie (1/3)",
+    "section": "Question 4",
+    "text": "Question 4\nChiffrez le message jaimelesexpos avec la méthode de Vigenère en utilisant la clé \\((1,3,24)\\).\n\nSolution. KDGNHJFVCYSMT",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>07 - Cryptographie (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto1/Crypto1.html#question-5",
+    "href": "exercices/Crypto1/Crypto1.html#question-5",
+    "title": "07 - Cryptographie (1/3)",
+    "section": "Question 5",
+    "text": "Question 5\nSoient \\(a, b\\) et \\(c\\) des entiers avec \\(a \\neq 0\\). Montrez les énoncés ci-dessous.\n\nSi \\(a|b\\), alors \\(a|bc\\).\nSi \\(b \\neq 0\\), alors \\(a|b\\) et \\(b|c\\) entraînent que \\(a|c\\).\nSi \\(a|b\\) et \\(a|c\\), alors \\(a|(bx+cy)\\) pour tout \\(x, y \\in \\mathbb{Z}\\).\nSi \\(b \\neq 0\\), le fait que \\(a|b\\) et \\(b|a\\) implique que \\(a = \\pm b\\).\nSi \\(c \\neq 0\\) et que \\(a|b\\), alors \\(ac|bc\\).\n\n\nSolution. \n\nSi \\(a|b\\), alors il existe \\(k \\in \\mathbb{Z}\\) tel que \\(b = ka\\). Ainsi, \\(bc = kac = ja\\), où \\(j = kc \\in \\mathbb{Z}\\). On a donc \\(a|bc\\).\nSi \\(a|b\\) et \\(b|c\\), alors il existe \\(k\\) et \\(j \\in \\mathbb{Z}\\) tels que \\(b = ka\\) et \\(c = jb\\). Nous avons donc \\(c = jka = la\\), où \\(l = jk \\in \\mathbb{Z}\\). Cela montre que \\(a\\) divise \\(c\\).\nSi \\(a|b\\) et \\(a|c\\), alors il existe \\(k, j \\in \\mathbb{Z}\\) tels que \\(b = ka\\) et \\(c = ja\\). Nous avons donc pour tout \\(x, y \\in \\mathbb{Z}\\), \\[\nbx + cy = kax + jay = (kx + jy)a = la,\n\\] où \\(l = kx + jy \\in \\mathbb{Z}\\). Ainsi, \\(a|(bx+cy)\\).\nSi \\(a|b\\) et \\(b|a\\), alors il existe \\(k, j \\in \\mathbb{Z}\\) tels que \\(b = ka\\) et \\(a = jb\\). On doit donc avoir \\(b = jka\\). Comme \\(b \\neq 0\\), \\(jk = 1\\). Les nombres \\(j\\) et \\(k\\) étant des entiers, \\(j = k = 1\\) ou \\(j = k = -1\\). Dans le premier cas, \\(a = b\\), et dans l’autre, \\(a = -b\\).\nSi \\(a|b\\), alors il existe \\(k \\in \\mathbb{Z}\\) tel que \\(b = ka\\). On a donc \\(bc = k(ac)\\). Les nombres \\(a\\) et \\(c\\) étant tous les deux différents de 0, \\(ac|bc\\).",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>07 - Cryptographie (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto1/Crypto1.html#question-6",
+    "href": "exercices/Crypto1/Crypto1.html#question-6",
+    "title": "07 - Cryptographie (1/3)",
+    "section": "Question 6",
+    "text": "Question 6\nSoient \\(a, b, c, d\\) et \\(m\\), des entiers avec \\(m &gt; 0\\). Montrez chacune des énoncés ci-dessous.\n\n\\(a\\equiv b\\pmod m\\), \\(a\\equiv a\\pmod m\\) et \\(a-b\\equiv 0\\pmod m\\) sont des énoncés équivalents.\nSi \\(a\\equiv b\\pmod m\\) et \\(c\\equiv d\\pmod m\\), alors \\(a+c\\equiv b+d\\pmod m\\).\nSi \\(a\\equiv b\\pmod m\\) et \\(b\\equiv c\\pmod m\\), alors \\(a\\equiv c\\pmod m\\).\nSi \\(ax\\equiv ay\\pmod m\\) et que \\(\\text{pgcd}(a, m) = 1\\), alors \\(x\\equiv y\\pmod m\\).\n\\(ax\\equiv ay\\pmod m\\) n’implique pas que \\(x\\equiv y\\pmod m\\).\n\n\nSolution. \n\nNous avons que \\(a\\equiv b\\pmod m\\) entraîne que \\(m\\) divise \\(a-b\\) par définition. D’après la proposition précédente, on aura que \\(m\\) divise \\((-1)(a-b)\\), c’est-à-dire que \\(m\\) divise \\(b-a\\). Cela revient à affirmer que \\(b\\equiv a\\pmod m\\). De la même façon, \\(b\\equiv a\\pmod m\\) entraîne que \\(m\\) divise \\(b-a\\) par définition. D’après la proposition précédente, on aura que \\(m\\) divise \\((-1)(b-a)\\), c’est-à-dire que \\(m\\) divise \\(a-b\\). Cela revient à affirmer que \\(a\\equiv b\\pmod m\\). Si \\(a\\equiv b\\pmod m\\), \\(m\\) divise \\(a-b\\) par définition. Ainsi, \\(m\\) divise \\((a-b)-0\\), d’où \\(a-b\\equiv 0\\pmod m\\). Si \\(a-b\\equiv 0\\pmod m\\), alors \\(m\\) divise \\((a-b)-0\\) par définition. Ainsi, \\(m\\) divise \\(a-b\\), d’où \\(a\\equiv b\\pmod m\\).\nSi \\(a\\equiv b\\pmod m\\) et \\(c\\equiv d\\pmod m\\), alors \\(m\\) divise \\(a-b\\) et \\(c-d\\). D’après la proposition précédente, \\(m\\) doit diviser \\(a-b+c-d=(a+c)-(b+d)\\). Par définition, on aura donc que \\(a+c\\equiv b+d\\pmod m\\).\nSi \\(a\\equiv b\\pmod m\\) et \\(b\\equiv c\\pmod m\\), alors \\(m\\) doit diviser \\(a-b\\) et \\(b-c\\). On aura donc, d’après la proposition précédente, que \\(m\\) divise \\((a-b)+(b-c)=a-c\\). Cela veut précisément dire que \\(a\\equiv c\\pmod m\\).\nSi \\(ax\\equiv ay\\pmod m\\), alors il existe \\(k\\in\\mathbb{Z}\\) tel que \\(ax-ay=a(x-y)=km\\). Puisque \\(m|a(x-y)\\), et que \\(\\text{pgcd}(a,m)=1\\), le lemme d’Euclide entraîne que \\(m\\) doit diviser \\(x-y\\). Il suit donc que \\(x\\equiv y\\pmod m\\).\nPrenons \\(a=2,x=5, y=0\\) et \\(m=10\\). On a bien que \\(ax\\equiv ay\\pmod m\\). Cependant, \\(x\\not\\equiv y\\pmod m\\).",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>07 - Cryptographie (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto1/Crypto1.html#question-7",
+    "href": "exercices/Crypto1/Crypto1.html#question-7",
+    "title": "07 - Cryptographie (1/3)",
+    "section": "Question 7",
+    "text": "Question 7\nEn utilisant l’algorithme d’Euclide et des calculs supplémentaires, répondez aux questions ci-dessous.\n\nTrouvez le \\(\\text{pgcd}\\) de \\(42\\,823\\) et \\(6\\,409\\).\nTrouvez \\(x, y\\) tels que \\(42\\,823x + 6\\,409y = 17\\).\nFactorisez \\(42\\,823\\) et \\(6\\,409\\) en nombres premiers.\nRetrouver le \\(\\text{pgcd}\\) à partir des factorisations.\n\n\nSolution. \n\nNous avons que \\[\\begin{align}\n     42\\,823=&~6\\cdot 6\\,409+4\\,369\\\\\n     6\\,409=&~1\\cdot 4\\,369+2\\,040\\\\\n     4\\,369=&~2\\cdot 2\\,040+289\\\\\n     2\\,040=&~7\\cdot 289+17\\\\\n     289=&~17\\cdot 17.\n     \\end{align}\\] Par conséquent, \\(\\text{pgcd}(42\\,823,6\\,409)=17\\).\nNous avons que \\[\\begin{align}\n     17=&~2\\,040-7\\cdot 289\\\\\n     =&~2\\,040-7(4\\,369-2\\cdot 2\\,040)\\\\\n     =&~15\\cdot 2\\,040-7\\cdot 4\\,369\\\\\n     =&~15\\cdot(6\\,409-4\\,369)-7\\cdot 4\\,369\\\\\n     =&~15\\cdot 6\\,409-22\\cdot 4\\,369\\\\\n     =&~15\\cdot 6\\,409-22\\cdot(22\\,823-6\\cdot 6\\,409)\\\\\n     =&~147\\cdot 6\\,409-22\\cdot 22\\,823.\n     \\end{align}\\] On peut donc prendre \\(x=-22\\) et \\(y=147\\). Il ne s’agit pas là de la seule possibilité pour \\(x\\) et \\(y\\).\nPour trouver les nombres premiers qui divisent un entier \\(n\\), on peut successivement diviser cet entier par les nombres premiers inférieurs à \\(\\left\\lfloor \\sqrt{n}\\right\\rfloor.\\) Si aucun de ces nombres premiers divise \\(n\\), c’est que \\(n\\) est lui-même un nombre premier. Ainsi, pour trouver les nombres premiers qui divisent \\(6\\,409\\), on doit s’intéresser aux nombres premiers entre 2 et 80. On peut vérifier que 13 divise \\(6\\,409\\), et qu’on a en fait \\(6\\,409=13\\cdot 493\\). On doit maintenant factoriser 493. Les nombres premiers pouvant diviser 493 sont ceux entre 13 et 22. En effet, les nombres premiers inférieurs à 13 ne pourront pas diviser 493, car 493 est un facteur de \\(6\\,409\\), et aucun nombre premier entre 2 et 13 ne divisait \\(6\\,409\\). On trouve que \\(493=17\\cdot 29\\). Comme 13, 17 et 29 sont tous des nombres premiers, la factorisation est \\(6\\,409=13\\cdot 17\\cdot 29\\). En procédant de façon similaire, on trouve que \\(42\\,823=11\\cdot 17\\cdot 229\\). Notons que puisqu’on savait depuis la partie (a) que 17 était le plus grand commun diviseur des nombres \\(6\\,409\\) et \\(42\\,823\\), nous savions que ceux-ci étaient divisibles par 17, et qu’aucun autre nombre premier pouvait diviser à la fois les deux nombres. Cela pouvait éliminer quelques diviseurs possibles.\nEn regardant la factorisation première des deux nombres, on voit que le seul nombre premier qui les divise tous les deux est 17. La plus grande puissance de 17 qui divise les deux nombres est \\(17^1\\), et donc 17 est le plus grand commun diviseur de ceux-ci.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>07 - Cryptographie (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html",
+    "href": "exercices/Crypto2/Crypto2.html",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "",
+    "text": "Question 1\nMontrez qu’il y a une infinité de nombres premiers.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html#question-1",
+    "href": "exercices/Crypto2/Crypto2.html#question-1",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "",
+    "text": "Solution. Supposons, par l’absurde, que l’ensemble des nombres premiers soit fini. Notons ces nombres premiers par \\[\np_1, p_2, \\ldots, p_n.\n\\]\nConstruisons le nombre \\(N\\) défini par : \\[\nN = p_1 \\cdot p_2 \\cdot \\ldots \\cdot p_n + 1.\n\\]\nCe nombre \\(N\\) est strictement supérieur à \\(1\\) et n’est divisible par aucun des nombres premiers \\(p_1, p_2, \\ldots, p_n\\). En effet, la division de \\(N\\) par un \\(p_i\\) laisse un reste de \\(1\\). Par conséquent, \\(N\\) est soit un nombre premier, soit divisible par un nombre premier qui n’est pas dans la liste \\(\\{p_1, p_2, \\ldots, p_n\\}\\).\nDans les deux cas, cela contredit l’hypothèse selon laquelle \\(p_1, p_2, \\ldots, p_n\\) sont tous les nombres premiers.\nAinsi, il existe une infinité de nombres premiers.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html#question-2",
+    "href": "exercices/Crypto2/Crypto2.html#question-2",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "Question 2",
+    "text": "Question 2\nRésolvez chacune des équations suivantes sans l’aide d’une calculatrice ou d’un ordinateur.\n\n\\(15x\\equiv 2\\pmod{4}\\)\n\nSolution. \\(x\\equiv 2\\pmod{4}\\)\n\n\\(12x\\equiv 4\\pmod{3}\\)\n\nSolution. Aucune solution\n\n\\(2x\\equiv 3\\pmod{6}\\)\n\nSolution. Aucune solution\n\n\\(2x\\equiv 3\\pmod{7}\\)\n\nSolution. \\(x\\equiv 5\\pmod{7}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html#question-3",
+    "href": "exercices/Crypto2/Crypto2.html#question-3",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "Question 3",
+    "text": "Question 3\nTrouvez, s’ils existent, les inverses multiplicatifs des nombres ci-dessous.\n\nL’inverse de 12 modulo 23\n\nSolution. \\(2\\)\n\nL’inverse de 33 modulo 114\n\nSolution. Pas inversible\n\nL’inverse de 101 modulo 102\n\nSolution. \\(101\\)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html#question-4",
+    "href": "exercices/Crypto2/Crypto2.html#question-4",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "Question 4",
+    "text": "Question 4\nRésolvez les systèmes d’équations de congruences ci-dessous sans l’aide d’une calculatrice ou d’un ordinateur.\n\n\\[\nx \\equiv 1 \\pmod{2} \\\\\nx \\equiv 1 \\pmod{3} \\\\\nx \\equiv 1 \\pmod {4}\n\\]\n\nSolution. \\(x\\equiv 1\\pmod{12}\\)\n\n\\[\n2x \\equiv 3 \\pmod{5} \\\\\n3x \\equiv 1 \\pmod{8}\n\\]\n\nSolution. \\(x\\equiv 19\\pmod{40}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html#question-5",
+    "href": "exercices/Crypto2/Crypto2.html#question-5",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "Question 5",
+    "text": "Question 5\nNous avons chiffré le mot bingo avec un chiffre affine dont la clé est \\(x \\mapsto 3x + 4\\). Quel mot avons-nous obtenu ?\n\nSolution. HCRWU",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html#question-6",
+    "href": "exercices/Crypto2/Crypto2.html#question-6",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "Question 6",
+    "text": "Question 6\nSans faire usage de résultats avancés de théorie des nombres, montrez que \\(\\phi(p^n) = p^n - p^{n-1}\\).\n\nSolution. La valeur de \\(\\phi(p^n)\\) correspond au nombre de nombres entre 1 et \\(p^n\\) qui sont copremiers à \\(p^n\\). Comme \\(p\\) est le seul facteur premier de \\(p^n\\), il suffit de compter les nombres qui n’ont pas \\(p\\) comme facteur premier.\nLes nombres qui ont \\(p\\) comme facteur premier, et qui sont inférieurs ou égaux à \\(p^n\\), sont précisément\n\\[\n1 \\cdot p, 2 \\cdot p, 3 \\cdot p, \\ldots, p^{n-1} \\cdot p.\n\\] Il y en a donc \\(p^{n-1}\\). Par conséquent, il y a \\(p^n - p^{n-1}\\) nombres entre 1 et \\(p^n\\) qui sont copremiers à \\(p^n\\), d’où \\(\\phi(p^n) = p^n - p^{n-1}\\).",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html#question-7",
+    "href": "exercices/Crypto2/Crypto2.html#question-7",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "Question 7",
+    "text": "Question 7\nLe mot GIBCT a été obtenu après avoir chiffré le mot bravo à l’aide d’un chiffre affine \\(x \\mapsto \\alpha x + \\beta\\). Quelles étaient les valeurs de \\(\\alpha\\) et \\(\\beta\\) ?\n\nSolution. La transformation est \\(x \\mapsto 5x + 1 \\mod 26\\), c’est-à-dire \\(\\alpha = 5\\) et \\(\\beta = 1\\).",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html#question-8",
+    "href": "exercices/Crypto2/Crypto2.html#question-8",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "Question 8",
+    "text": "Question 8\nPour chacune des valeurs de \\(n\\) ci-dessous, déterminez combien il y a de clés fonctionnelles possibles pour un chiffrement affine \\(x \\mapsto \\alpha x + \\beta\\) sur un alphabet à \\(n\\) symboles.\n\n\\(n = 26\\)\n\nSolution. \\(311\\)\n\n\\(n = 15\\)\n\nSolution. \\(119\\)\n\n\\(n = p\\), où \\(p\\) est un nombre premier\n\nSolution. \\(p^2 - p - 1\\)\n\n\\(n = 5\\,764\\,801\\)\n\nSolution. \\(\\phi(7^8) \\cdot 7^8 - 1 = 28\\,485\\,369\\,059\\,657\\)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html#question-9",
+    "href": "exercices/Crypto2/Crypto2.html#question-9",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "Question 9",
+    "text": "Question 9\nPour chacune des matrices suivantes, déterminez si son inverse existe modulo 8. Si c’est le cas, trouvez la matrice inverse.\n\n\\[\\begin{pmatrix}\n2 & 1 \\\\\n0 & 2\n\\end{pmatrix}\\]\n\nSolution. Elle n’est pas inversible.\n\n\\[\\begin{pmatrix}\n2 & 1 \\\\\n-3 & 5\n\\end{pmatrix}\\]\n\nSolution. \\[\\begin{pmatrix}\n2 & 1 \\\\\n0 & 2\n\\end{pmatrix}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto2/Crypto2.html#question-10",
+    "href": "exercices/Crypto2/Crypto2.html#question-10",
+    "title": "08 - Cryptographie (2/3)",
+    "section": "Question 10",
+    "text": "Question 10\nChiffrez le mot alberta à l’aide de la méthode de Hill en utilisant la clé\n\\[\\begin{pmatrix}\n5 & 12 \\\\\n-8 & 5\n\\end{pmatrix}\\]\n\nSolution. Si on prend la lettre \\(b\\) comme symbole de remplissage, on obtient le cryptogramme CDBMBLMF. Si on choisit un autre symbole de remplissage, les deux derniers symboles du cryptogramme peuvent être différents.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>08 - Cryptographie (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto3/Crypto3.html",
+    "href": "exercices/Crypto3/Crypto3.html",
+    "title": "09 - Cryptographie (3/3)",
+    "section": "",
+    "text": "Question 1\nWilbrod utilise RSA pour communiquer avec sa douce Pauline. Il a choisi deux grands nombres premiers \\(p\\) et \\(q\\), qu’il garde secrets. Il a calculé \\(n\\), le produit de \\(p\\) et \\(q\\), puis a rendu public ce nombre. Il a aussi choisi un nombre entier \\(e\\) situé entre 1 et \\(\\phi(n)\\), copremier à \\(\\phi(n)\\), qu’il a également rendu public.\nPauline veut envoyer un message \\(m\\), mais elle le chiffre deux fois à l’aide de la même clé publique \\((n, e)\\), obtenant ainsi un message chiffré \\(b\\). La clé publique de Wilbrod satisfait \\(e^2\\equiv 1\\pmod{\\phi(n)}\\).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>09 - Cryptographie (3/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto3/Crypto3.html#question-1",
+    "href": "exercices/Crypto3/Crypto3.html#question-1",
+    "title": "09 - Cryptographie (3/3)",
+    "section": "",
+    "text": "Expliquez pourquoi toute personne interceptant le message chiffré découvrira sans effort le message initial.\n\n\nSolution. L’intercepteur verra directement le message de départ, car en chiffrant deux fois avec la clé publique, on revient au message initial \\(m\\).\n\n\nSi Wilbrod avait choisi \\(p = 3\\) et \\(q = 11\\), quelles valeurs de \\(e\\) devait-il éviter pour que \\(e^2\\equiv 1\\pmod{\\phi(n)}\\) ne soit pas vrai ?\n\n\nSolution. Les valeurs à éviter sont \\(1, 9, 11\\), et \\(19\\).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>09 - Cryptographie (3/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto3/Crypto3.html#question-2",
+    "href": "exercices/Crypto3/Crypto3.html#question-2",
+    "title": "09 - Cryptographie (3/3)",
+    "section": "Question 2",
+    "text": "Question 2\nMaria et Gontrand utilisent la méthode RSA pour communiquer. Ils utilisent le même module \\(n\\), mais des exposants de chiffrement \\(e_M\\) et \\(e_G\\) différents, tels que \\(\\text{pgcd}(e_M, e_G) = 1\\). Dimitri intercepte les messages cryptés \\(c_M\\) et \\(c_G\\) et veut retrouver le message initial \\(m\\).\n\nMontrez que Dimitri peut retrouver le message initial \\(m\\).\n\n\nSolution. Dimitri peut utiliser la relation \\(c_M^{k_1}c_G^{k_2}\\equiv m\\pmod{n}\\), où \\(k_1\\) et \\(k_2\\) sont tels que \\(k_1e_M + k_2e_G = 1\\).\n\n\nSi \\(e_M = 10\\) et \\(e_G = 7\\), trouvez deux entiers \\(x\\) et \\(y\\) tels que \\(e_Mx + e_Gy = 1\\).\n\n\nSolution. Une solution possible est \\(x = -2\\) et \\(y = 3\\).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>09 - Cryptographie (3/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto3/Crypto3.html#question-3",
+    "href": "exercices/Crypto3/Crypto3.html#question-3",
+    "title": "09 - Cryptographie (3/3)",
+    "section": "Question 3",
+    "text": "Question 3\n\nÉnoncez le théorème d’Euler.\n\n\nSolution. Soit \\(n\\) un entier strictement positif, et soit \\(a \\in \\mathbb{Z}\\) vérifiant \\(\\text{pgcd}(a, n) = 1\\). Alors : \\[\na^{\\phi(n)} \\equiv 1 \\pmod{n},\n\\] où \\(\\phi(n)\\) est la fonction indicatrice d’Euler.\n\n\nUtilisez le théorème d’Euler pour trouver les deux derniers chiffres du nombre \\(7^{222}\\).\n\n\nSolution. Les deux derniers chiffres de \\(7^{222}\\) sont \\(49\\).\n\n\nSoit \\(p\\) un nombre premier. Montrez que : \\[\n2^{p-1} + 3^{p-1} + \\ldots + (p-1)^{p-1} \\equiv -2 \\pmod{p}.\n\\]\n\n\nSolution. En appliquant le petit théorème de Fermat à chaque terme, nous trouvons que la somme totale est équivalente à \\((p - 2) \\pmod{p}\\), soit \\(-2 \\pmod{p}\\).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>09 - Cryptographie (3/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto3/Crypto3.html#question-4",
+    "href": "exercices/Crypto3/Crypto3.html#question-4",
+    "title": "09 - Cryptographie (3/3)",
+    "section": "Question 4",
+    "text": "Question 4\n\nTrouvez les trois derniers chiffres du nombre \\(43^{402}\\) avec l’aide d’une calculatrice, mais pas d’un ordinateur.\n\n\nSolution. Les trois derniers chiffres de \\(43^{402}\\) sont \\(849\\).\n\n\nMontrez que pour tout entier \\(n\\), \\(n(n^4 - 1)\\) est divisible par \\(15\\).\n\n\nSolution. Pour tout \\(n\\), \\(n(n^4 - 1)\\) est un produit contenant les facteurs \\(n - 1\\), \\(n\\), et \\(n + 1\\), qui sont trois entiers consécutifs. Un de ces nombres est divisible par 3 et un autre par 5. Ainsi, le produit est divisible par \\(15\\).\n\n\nMontrez que pour tout entier \\(n\\), \\(n^2(n^4 - 1)\\) est divisible par \\(60\\).\n\n\nSolution. Le raisonnement est similaire au précédent, mais en incluant \\(n^2\\), qui garantit un facteur de 4 (puisque \\(n^2\\) est pair). Par conséquent, le produit est divisible par \\(4 \\times 15 = 60\\).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>09 - Cryptographie (3/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/Crypto3/Crypto3.html#question-5",
+    "href": "exercices/Crypto3/Crypto3.html#question-5",
+    "title": "09 - Cryptographie (3/3)",
+    "section": "Question 5",
+    "text": "Question 5\nOn choisit deux nombres premiers \\(p\\) et \\(q\\) congrus à \\(2\\) modulo \\(3\\). On pose \\(n = p \\cdot q\\), puis on chiffre un message \\(x\\) par \\(y \\equiv x^3 \\pmod{n}\\). Le déchiffrement se fait par \\(z \\equiv y^d \\pmod{n}\\), où : \\[\nd = \\frac{2(p - 1)(q - 1) + 1}{3}.\n\\]\n\nMontrez que \\(d\\) est un entier.\n\n\nSolution. Puisque \\(p\\) et \\(q\\) sont congrus à \\(2\\) modulo \\(3\\), il existe des entiers \\(a\\) et \\(b\\) tels que \\(p = 3a + 2\\) et \\(q = 3b + 2\\). Substituant dans l’expression de \\(d\\), on montre que \\(d\\) est un entier.\n\n\nMontrez que \\(y\\) et \\(z\\) ne sont pas congrus à \\(0\\) modulo \\(n\\).\n\n\nSolution. Si \\(y \\equiv 0 \\pmod{n}\\), alors \\(x^3 \\equiv 0 \\pmod{n}\\), ce qui impliquerait que \\(n \\mid x^3\\). Mais cela est impossible car \\(\\text{pgcd}(x, n) = 1\\). Un raisonnement similaire s’applique pour \\(z\\).\n\n\nMontrez que \\(z\\equiv x\\pmod{n}\\), c’est-à-dire que le déchiffrement fonctionne.\n\n\nSolution. En utilisant le théorème d’Euler et la relation \\(d = \\frac{2(p-1)(q-1) + 1}{3}\\), nous montrons que \\(z \\equiv x \\pmod{n}\\).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>09 - Cryptographie (3/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto1/PSto1.html",
+    "href": "exercices/PSto1/PSto1.html",
+    "title": "10 - Processus stochastiques (1/3)",
+    "section": "",
+    "text": "Question 1\nFlorence a trouvé que \\(\\vec{v} = (1, -2, 6)\\) est un vecteur propre associé à une certaine valeur propre \\(\\lambda\\) d’une matrice \\(A\\). En utilisant un logiciel pour vérifier son résultat, elle a plutôt obtenu le vecteur \\(\\vec{w} = (-5, 10, -30)\\). Ne trouvant pas son erreur, elle demanda de l’aide à son enseignante, qui lui expliqua que le vecteur qu’elle avait obtenu est aussi une bonne réponse. Expliquez pourquoi.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>10 - Processus stochastiques (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto1/PSto1.html#question-1",
+    "href": "exercices/PSto1/PSto1.html#question-1",
+    "title": "10 - Processus stochastiques (1/3)",
+    "section": "",
+    "text": "Solution. Florence n’a pas à être surprise qu’on lui propose un vecteur différent de celui qu’elle a trouvé. Dès qu’on sait que \\(\\vec{v}\\) est un vecteur propre d’une matrice associé à une valeur propre \\(\\lambda\\), n’importe quel vecteur colinéaire à \\(\\vec{v}\\) qui est non nul sera lui aussi un vecteur propre associé à \\(\\lambda\\). Comme \\((-5, 10, -30) = -5 \\cdot (1, -2, 6)\\), il va de soi que \\(\\vec{v}\\) et \\(\\vec{w}\\) sont deux bonnes réponses.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>10 - Processus stochastiques (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto1/PSto1.html#question-2",
+    "href": "exercices/PSto1/PSto1.html#question-2",
+    "title": "10 - Processus stochastiques (1/3)",
+    "section": "Question 2",
+    "text": "Question 2\nMontrez que si \\(\\vec{v}\\) est un vecteur propre d’une matrice \\(A\\) associé à une valeur propre \\(\\lambda\\), alors \\(\\mu \\vec{v}\\) est lui aussi un vecteur propre de \\(A\\) associé à \\(\\lambda\\), quel que soit \\(\\mu \\in \\mathbb{R}\\).\n\nSolution. Sera fait en classe.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>10 - Processus stochastiques (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto1/PSto1.html#question-3",
+    "href": "exercices/PSto1/PSto1.html#question-3",
+    "title": "10 - Processus stochastiques (1/3)",
+    "section": "Question 3",
+    "text": "Question 3\nPour chacune des matrices suivantes, déterminez son polynôme caractéristique, ses valeurs propres, et les vecteurs propres associés à chacune des valeurs propres.\n\n\\[\\begin{pmatrix}\n6 & 14 & 9 \\\\\n0 & 3 & 0 \\\\\n0 & -10 & -3\n\\end{pmatrix}\\]\n\nSolution. Le polynôme caractéristique est \\(p(\\lambda) = -\\lambda^3 + 6\\lambda^2 + 9\\lambda - 54\\). Les valeurs propres sont \\(\\lambda_1 = 6\\), \\(\\lambda_2 = -3\\), et \\(\\lambda_3 = 3\\). Les vecteurs propres associés sont :\n\n\\(\\lambda_1\\): \\((t, 0, 0)\\) où \\(t \\in \\mathbb{R}^{\\star}\\),\n\\(\\lambda_2\\): \\((t, 0, -t)\\) où \\(t \\in \\mathbb{R}^{\\star}\\),\n\\(\\lambda_3\\): \\((t, 3t, -5t)\\) où \\(t \\in \\mathbb{R}^{\\star}\\).\n\n\n\\[\\begin{pmatrix}\n1 & 2 & 3 \\\\\n3 & 2 & 1 \\\\\n4 & 4 & 4\n\\end{pmatrix}\\]\n\nSolution. Le polynôme caractéristique est \\(p(\\lambda) = -\\lambda^3 + 7\\lambda^2 + 8\\lambda\\). Les valeurs propres sont \\(\\lambda_1 = 8\\), \\(\\lambda_2 = -1\\), et \\(\\lambda_3 = 0\\). Les vecteurs propres associés sont :\n\n\\(\\lambda_1\\): \\((5t, 4t, 9t)\\) où \\(t \\in \\mathbb{R}^{\\star}\\),\n\\(\\lambda_2\\): \\((t, -t, 0)\\) où \\(t \\in \\mathbb{R}^{\\star}\\),\n\\(\\lambda_3\\): \\((t, -2t, t)\\) où \\(t \\in \\mathbb{R}^{\\star}\\).\n\n\n\\[\\begin{pmatrix}\na & 0 \\\\\n0 & b\n\\end{pmatrix}\\] où \\(a, b \\in \\mathbb{R}\\).\n\nSolution. Cas 1: \\(a = b = 0\\) Le polynôme caractéristique est \\(p(\\lambda) = -\\lambda^2\\). La seule valeur propre est \\(\\lambda = 0\\), et tous les vecteurs non nuls sont des vecteurs propres.\nCas 2: \\(a = b \\neq 0\\) La matrice est une multiple scalaire de l’identité, donc tout vecteur non nul est un vecteur propre. L’unique valeur propre correspond à l’entrée non nulle de la matrice.\nCas 3: \\(a \\neq b\\) Les valeurs propres sont \\(\\lambda_1 = a\\) et \\(\\lambda_2 = b\\). Les vecteurs propres associés sont :\n\n\\(\\lambda_1\\): \\((t, 0)\\) où \\(t \\in \\mathbb{R}^{\\star}\\),\n\\(\\lambda_2\\): \\((0, t)\\) où \\(t \\in \\mathbb{R}^{\\star}\\).\n\n\n\\[\\begin{pmatrix}\n1 & 0 & \\frac{1}{3} \\\\[0.1cm]\n0 & \\frac{1}{2} & \\frac{1}{3} \\\\\n0 & \\frac{1}{2} & \\frac{1}{3}\n\\end{pmatrix}\\]\n\nSolution. Le polynôme caractéristique est \\(p(\\lambda) = -\\lambda^3 + \\frac{11}{6}\\lambda^2 - \\frac{5}{6}\\lambda\\). Les valeurs propres sont \\(\\lambda_1 = 1\\), \\(\\lambda_2 = \\frac{5}{6}\\), et \\(\\lambda_3 = 0\\). Les vecteurs propres associés sont :\n\n\\(\\lambda_1\\): \\((t, 0, 0)\\) où \\(t \\in \\mathbb{R}^{\\star}\\),\n\\(\\lambda_2\\): \\((-2t, t, t)\\) où \\(t \\in \\mathbb{R}^{\\star}\\),\n\\(\\lambda_3\\): \\((t, 2t, -3t)\\) où \\(t \\in \\mathbb{R}^{\\star}\\).",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>10 - Processus stochastiques (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto1/PSto1.html#question-4",
+    "href": "exercices/PSto1/PSto1.html#question-4",
+    "title": "10 - Processus stochastiques (1/3)",
+    "section": "Question 4",
+    "text": "Question 4\nSoit \\(P\\) une matrice ayant \\(\\lambda\\) comme valeur propre et \\(\\vec{v}\\) comme vecteur propre associé à \\(\\lambda\\). Si \\(n \\in \\mathbb{N}\\), montrez par induction que \\(\\lambda^n\\) est une valeur propre de \\(P^n\\), et que \\(\\vec{v}\\) est un vecteur propre de \\(P^n\\) associé à \\(\\lambda^n\\).\n\nSolution. Sera fait en classe.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>10 - Processus stochastiques (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto1/PSto1.html#question-5",
+    "href": "exercices/PSto1/PSto1.html#question-5",
+    "title": "10 - Processus stochastiques (1/3)",
+    "section": "Question 5",
+    "text": "Question 5\nMontrez que deux vecteurs de probabilités ne peuvent pas être colinéaires.\n\nSolution. Sera fait en classe.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>10 - Processus stochastiques (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto1/PSto1.html#question-6",
+    "href": "exercices/PSto1/PSto1.html#question-6",
+    "title": "10 - Processus stochastiques (1/3)",
+    "section": "Question 6",
+    "text": "Question 6\nUne matrice \\(M\\) possède un vecteur propre \\(\\vec{v}\\) qui est un vecteur de probabilités. Est-ce que \\(M\\) est nécessairement stochastique ? Justifiez.\n\nSolution. Non, \\(M\\) n’est pas nécessairement stochastique. Par exemple : \\[\nA = \\begin{pmatrix}\n1 & \\frac{1}{2} \\\\\n0 & 2\n\\end{pmatrix}, \\quad \\text{où } A \\cdot \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}.\n\\] Le vecteur \\(\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}\\) est un vecteur propre de \\(A\\) associé à la valeur propre \\(1\\), mais \\(A\\) n’est pas stochastique.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>10 - Processus stochastiques (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto1/PSto1.html#question-7",
+    "href": "exercices/PSto1/PSto1.html#question-7",
+    "title": "10 - Processus stochastiques (1/3)",
+    "section": "Question 7",
+    "text": "Question 7\nSoient \\(M\\) une matrice stochastique, et \\(\\vec{v}\\) un vecteur de probabilités. Montrez que \\(M\\vec{v}\\) est aussi un vecteur de probabilités.\n\nSolution. Sera fait en classe.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>10 - Processus stochastiques (1/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto2/PSto2.html",
+    "href": "exercices/PSto2/PSto2.html",
+    "title": "11 - Processus stochastiques (2/3)",
+    "section": "",
+    "text": "Question 1\nConstruisez une procédure qui prend comme entrée un vecteur \\(\\vec{v}\\), et qui retourne un vecteur de probabilités colinéaire à \\(\\vec{v}\\).",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>11 - Processus stochastiques (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto2/PSto2.html#question-2",
+    "href": "exercices/PSto2/PSto2.html#question-2",
+    "title": "11 - Processus stochastiques (2/3)",
+    "section": "Question 2",
+    "text": "Question 2\nDans une ville, on a remarqué qu’il y avait trois types de véhicules :\n\nles automobiles de type berlines et coupés (A) ;\nles véhicules utilitaires sportifs (V);\nles camionnettes (C).\n\nChaque année, on observe les transitions suivantes :\n\n\\(3\\%\\) des propriétaires de (A) échangent leur (A) pour un (V), et \\(1\\%\\) échangent leur (A) pour un (C) ;\n\\(2\\%\\) des propriétaires d’un (V) échangent leur (V) pour un (A), et \\(3\\%\\) échangent leur (V) pour un (C) ;\n\\(5\\%\\) des propriétaires d’un (C) échangent leur (C) pour un (V), et \\(2\\%\\) échangent leur (C) pour un (A).\n\nActuellement, les proportions sont de :\n\n\\(65\\%\\) pour (A),\n\\(30\\%\\) pour (V),\n\\(5\\%\\) pour (C).\n\nEn supposant que le nombre de véhicules reste constant, déterminez les proportions de (A), (V), et (C) dans :\n\n1 an ;\n\n5 ans ;\n\n10 ans ;\n\nÀ long terme.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>11 - Processus stochastiques (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto2/PSto2.html#question-3",
+    "href": "exercices/PSto2/PSto2.html#question-3",
+    "title": "11 - Processus stochastiques (2/3)",
+    "section": "Question 3",
+    "text": "Question 3\n(Source: Wikipédia)\nDoudou, le hamster paresseux, connaît trois endroits dans sa cage : les copeaux où il dort, la mangeoire où il mange, et la roue où il fait de l’exercice. Ses journées sont assez semblables les unes aux autres, et son activité peut être modélisée par une chaîne de Markov.\nLes probabilités de transition sont les suivantes :\n\nQuand il dort, il a \\(9/10\\) de chances de ne pas se réveiller. Lorsqu’il se réveille, il a \\(1/2\\) de chances d’aller manger et \\(1/2\\) de chances de faire de l’exercice.\nAprès avoir mangé, il a \\(7/10\\) de chances de retourner dormir et \\(3/10\\) de chances de partir courir.\nAprès avoir couru, il a \\(8/10\\) de chances de retourner dormir, sinon il continue à courir.\n\nCombien de temps Doudou passe-t-il à dormir en moyenne dans une journée ?",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>11 - Processus stochastiques (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto2/PSto2.html#question-4",
+    "href": "exercices/PSto2/PSto2.html#question-4",
+    "title": "11 - Processus stochastiques (2/3)",
+    "section": "Question 4",
+    "text": "Question 4\nUn policier contrôle la circulation aux 8 intersections illustrées ci-dessous. Lorsqu’il arrive à une intersection, il y demeure une heure, puis décide aléatoirement d’aller à une intersection voisine ou de rester à celle où il est. Chaque possibilité a la même probabilité d’être choisie. Par exemple :\n\nS’il est à l’intersection 5, il peut choisir d’aller à 2, 4, 5 ou 8, avec une probabilité de \\(1/4\\) pour chacune.\n\nÀ la fin de sa journée de travail, il choisit une intersection voisine (ou la même) comme point de départ pour le lendemain. Déterminez le pourcentage de son temps de travail qu’il passe à chacune des intersections.\n\n\n\nSchéma des intersections",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>11 - Processus stochastiques (2/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto3/PSto3.html",
+    "href": "exercices/PSto3/PSto3.html",
+    "title": "12 - Processus stochastiques (3/3)",
+    "section": "",
+    "text": "Indication\nPour certaines questions, vous êtes encouragés à utiliser un outil informatique pour faire les calculs.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>12 - Processus stochastiques (3/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto3/PSto3.html#indication",
+    "href": "exercices/PSto3/PSto3.html#indication",
+    "title": "12 - Processus stochastiques (3/3)",
+    "section": "",
+    "text": "Question 1\nLa matrice suivante est la matrice de transition d’une chaîne de Markov associée à un mini-web :\n\\[\n\\begin{pmatrix}\n0 & \\frac{1}{2} & 0 & \\frac{1}{2} \\\\\n\\frac{1}{3} & 0 & 0 & 0 \\\\\n\\frac{1}{3} & \\frac{1}{2} & \\frac{1}{2} & \\frac{1}{2} \\\\\n\\frac{1}{3} & 0 & \\frac{1}{2} & 0\n\\end{pmatrix}\n\\]\nDonnez une représentation schématique du mini-web.\n\nSolution. \n\n\n\nQuestion 2\nConsidérez le mini-web suivant :\n\n\nSans faire de calculs, déterminez le PageRank du mini-web.\nPouvez-vous ajouter d’autres liens tout en conservant le même PageRank ?\n\n\nSolution. \n\nPuisqu’un promeneur se déplace en suivant les liens et passe autant de temps sur chaque page, le PageRank est \\[\n1 \\cong 2 \\cong 3.\n\\]\nOn peut ajouter des liens de manière symétrique pour conserver le même PageRank. Par exemple :\n\n\n\n\n\nQuestion 3\nSoit \\(\\mathcal{W}\\) le mini-web suivant :\n\n\nSi un promeneur débute à la page 5, quel sera son PageRank ?\nQue se passe-t-il s’il débute à la page 2 ?\nDéterminez la matrice de transition de \\(\\mathcal{W}\\).\nTrouvez un vecteur \\(\\vec{v}\\) tel que \\(M\\vec{v} = \\vec{v}\\).\nTrouvez le polynôme caractéristique de \\(M\\).\nTrouvez les valeurs propres de \\(M\\).\nModifiez la matrice pour tenir compte des pages sans liens sortants. Appelez cette matrice \\(N\\).\nCalculez la matrice Google \\(G\\) avec une probabilité de téléportation \\(\\frac{1}{10}\\).\nUtilisez \\(G\\) pour déterminer le PageRank.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>12 - Processus stochastiques (3/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/PSto3/PSto3.html#question-4",
+    "href": "exercices/PSto3/PSto3.html#question-4",
+    "title": "12 - Processus stochastiques (3/3)",
+    "section": "Question 4",
+    "text": "Question 4\nConsidérez le mini-web \\(\\mathcal{W}\\) ci-dessous.\n\n\nTrouvez la matrice de transition de \\(\\mathcal{W}\\).\nTrouvez la matrice de transition de \\(\\mathcal{W}\\) qui permet la téléportation avec probabilité 0.15.\nÀ l’aide d’un outil informatique, trouvez le PageRank de \\(\\mathcal{W}\\) (en utilisant la matrice trouvée en 2).\n\n\nQuestion 5\nConsidérez un mini-web \\(\\mathcal{W}\\) avec \\(N\\) pages, où \\(N \\geq 2\\). Les vecteurs \\(\\vec{e}\\) et \\(\\vec{E}\\) sont définis par :\n\\[\n\\vec{e} = \\begin{pmatrix}\n1 \\\\\n1 \\\\\n\\vdots \\\\\n1\n\\end{pmatrix}, \\quad\n\\vec{E} = \\begin{pmatrix}\nE_1 \\\\\nE_2 \\\\\n\\vdots \\\\\nE_N\n\\end{pmatrix}, \\quad\nE_i = \\begin{cases}\n1 & \\text{si la page } i \\text{ n'a pas de liens sortants}, \\\\\n0 & \\text{sinon.}\n\\end{cases}\n\\]\n\nÀ quoi correspond \\(\\frac{1}{N}\\vec{e}\\vec{E}^T\\)?\nSi \\(A\\) est la matrice de transition, exprimez \\(B\\) pour tenir compte des pages sans liens sortants.\nMontrez que la matrice Google \\(G\\), avec une probabilité \\(\\beta\\), peut s’exprimer : \\[\nG = \\beta A + \\frac{1}{N} \\vec{e} (\\beta \\vec{E}^T + (1 - \\beta)\\vec{e}^T).\n\\]\nPourquoi \\(A\\) est une matrice creuse ? Pourquoi \\(G\\) est une matrice où tous les éléments sont dans \\(]0, 1[\\) ?",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>12 - Processus stochastiques (3/3)</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/GPS/GPS.html",
+    "href": "exercices/GPS/GPS.html",
+    "title": "13 - Localisation",
+    "section": "",
+    "text": "Indications\nPour répondre aux questions, vous devez considérer que :",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13 - Localisation</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/GPS/GPS.html#indications",
+    "href": "exercices/GPS/GPS.html#indications",
+    "title": "13 - Localisation",
+    "section": "",
+    "text": "La Terre est sphérique et son rayon est de \\(6378\\) km ;\nLa vitesse du son est de \\(0{,}348\\) km/s ;\nLa vitesse de la lumière est de \\(299\\,792{,}458\\) km/s.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13 - Localisation</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/GPS/GPS.html#question-1",
+    "href": "exercices/GPS/GPS.html#question-1",
+    "title": "13 - Localisation",
+    "section": "Question 1",
+    "text": "Question 1\nTrouvez les coordonnées polaires \\((r,\\theta)\\) des points dont les coordonnées cartésiennes sont données ci-dessous. Donnez l’angle \\(\\theta\\) en radians.\n\n\\((1, 0)\\)\n\nSolution. \\(\\left(r, \\theta\\right) = (1, 0)\\)\n\n\\((-8, 8)\\)\n\nSolution. \\(\\left(r, \\theta\\right) = \\left(8\\sqrt{2}, \\dfrac{3\\pi}{4}\\right)\\)\n\n\\(\\left(-5\\sqrt{3}, -5\\right)\\)\n\nSolution. \\(\\left(r, \\theta\\right) = \\left(10, -\\dfrac{2\\pi}{3}\\right)\\)\n\n\\((0, 0)\\)\n\nSolution. Non définies",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13 - Localisation</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/GPS/GPS.html#question-2",
+    "href": "exercices/GPS/GPS.html#question-2",
+    "title": "13 - Localisation",
+    "section": "Question 2",
+    "text": "Question 2\nTrouvez les coordonnées cartésiennes \\((x, y)\\) des points dont les coordonnées polaires sont données ci-dessous.\n\n\\((2, 135^\\circ)\\)\n\nSolution. \\(\\left(-\\sqrt{2}, \\sqrt{2}\\right)\\)\n\n\\(\\left(8, -\\dfrac{\\pi}{3}\\right)\\)\n\nSolution. \\(\\left(4, 4\\sqrt{3}\\right)\\)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13 - Localisation</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/GPS/GPS.html#question-3",
+    "href": "exercices/GPS/GPS.html#question-3",
+    "title": "13 - Localisation",
+    "section": "Question 3",
+    "text": "Question 3\nTrouvez les coordonnées sphériques \\((\\rho, \\theta, \\phi)\\) des points dont les coordonnées cartésiennes sont données ci-dessous. Donnez les angles en radians.\n\n\\(\\left(-1, 1, \\sqrt{2}\\right)\\)\n\nSolution. \\((\\rho, \\theta, \\phi) = \\left(2, \\dfrac{3\\pi}{4}, \\dfrac{\\pi}{4}\\right)\\)\n\n\\(\\left(0, -4, 4\\sqrt{3}\\right)\\)\n\nSolution. \\((\\rho, \\theta, \\phi) = \\left(8, -\\dfrac{\\pi}{2}, \\dfrac{\\pi}{3}\\right)\\)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13 - Localisation</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/GPS/GPS.html#question-4",
+    "href": "exercices/GPS/GPS.html#question-4",
+    "title": "13 - Localisation",
+    "section": "Question 4",
+    "text": "Question 4\n\nTrouvez une fonction \\(f(r)\\) qui prend une mesure d’angle en radians et la transforme en degrés.\nTrouvez une fonction \\(g(r)\\) qui prend une mesure d’angle en degrés et la transforme en radians.\nTrouvez une fonction \\(f(d, m, s)\\) qui transforme un angle en degrés-minutes-secondes vers un angle en radians. On se souviendra qu’un degré contient 60 minutes, et qu’une minute contient 60 secondes.\n\nSolution. \\(f(d, m, s) = \\dfrac{\\pi}{180}\\left(d + \\dfrac{m}{60} + \\dfrac{s}{3600}\\right)\\)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13 - Localisation</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/GPS/GPS.html#question-5",
+    "href": "exercices/GPS/GPS.html#question-5",
+    "title": "13 - Localisation",
+    "section": "Question 5",
+    "text": "Question 5\nEn vous référant au texte La traversée du Grand LacUne, déterminez la position du bateau dans chacune des situations ci-dessous. Les coordonnées de \\(P_i\\) correspondent à celle du \\(i^\\text{e}\\) port, alors que \\(t_i\\) est le temps de parcours du son entre le canon du \\(i^\\text{e}\\) port et le bateau.\n\\[\n\\begin{align*}\nP1 &= (0, 0)     & t_1 &= 126\\ \\text{s} \\\\\nP2 &= (50, 70)   & t_2 &= 157\\ \\text{s} \\\\\nP3 &= (90, 20)   & t_3 &= 173\\ \\text{s}\n\\end{align*}\n\\]\n\nVous connaissez les coordonnées de \\(P_1\\) et \\(P_2\\), de même que les temps \\(t_1\\) et \\(t_2\\). Vous savez de plus qu’il n’y a pas d’erreur d’horloge.\n\nSolution. Il y a deux solutions possibles : \\[\n(2{,}05585682; 43{,}79977804) \\quad \\text{et} \\quad (40{,}76545810; 16{,}15006284).\n\\]\n\nVous connaissez les coordonnées de tous les ports, de même que les temps de parcours du son de tous les canons. Cependant, vous savez qu’il y a une erreur d’horloge. Donnez aussi l’erreur de l’horloge.\n\nSolution. On obtient deux valeurs possibles pour l’erreur de l’horloge : \\(10{,}83394095\\) s et \\(287{,}3746477\\) s. La première valeur semble la plus plausible, car sinon les temps mesurés seraient inférieurs à l’erreur de l’horloge. On en conclut donc que la position est \\((33{,}59659918; 21{,}85171980)\\).",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13 - Localisation</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/GPS/GPS.html#question-6",
+    "href": "exercices/GPS/GPS.html#question-6",
+    "title": "13 - Localisation",
+    "section": "Question 6",
+    "text": "Question 6\nOn s’intéresse ici à l’imprécision sur la position d’un point dans le plan.\n\nTrouvez les coordonnées d’un point \\(P\\) situé à \\(147\\) km du point \\((50, 0)\\) et à \\(139.4\\) km du point \\((0, 50)\\).\n\nSolution. \\((-83{,}437779; -61{,}671379)\\) et \\((111{,}671379; 133{,}437779)\\)\n\nSi le point \\(P\\) est situé à \\(147\\) km \\(\\pm\\) \\(0.1\\) km du point \\((50, 0)\\) et à \\(139.4\\) km \\(\\pm\\) \\(0.1\\) km du point \\((0, 50)\\), quelle est l’erreur maximale qu’on commet sur la position de \\(P\\) en utilisant la réponse obtenue en (a) ?\n\nSolution. Pour le point situé près de \\((111{,}671379; 133{,}437779)\\), l’erreur maximale correspond à : \\[\n\\max\\{0{,}4073064796; 0{,}4071887791\\} = 0{,}4073064796.\n\\] Pour le point situé près de \\((-83{,}437779; -61{,}671379)\\), l’erreur maximale correspond à : \\[\n\\max\\{0{,}407306481; 0{,}407188782\\} = 0.407306481.\n\\]\n\nTrouvez les coordonnées d’un point \\(Q\\) situé à \\(147\\) km du point \\((50, 0)\\) et à \\(138.8\\) km du point \\((50, -100)\\).\nSi le point \\(Q\\) est situé à \\(147\\) km \\(\\pm\\) \\(0.1\\) km du point \\((50, 0)\\) et à \\(138.8\\) km \\(\\pm\\) \\(0.1\\) km du point \\((50, -100)\\), quelle est l’erreur maximale qu’on commet sur la position de \\(Q\\) en utilisant la réponse obtenue en (c) ?\nEst-ce que l’erreur maximale sur l’emplacement est plus grande pour le point \\(P\\) de la partie (b) ou pour le point \\(Q\\) de la partie (d) ? Pourquoi en est-il ainsi ?\n\nSolution. Pour trouver les coordonnées du point \\(Q\\), on procède comme pour le point \\(P\\). On trouvera que l’erreur d’estimation de la position est moins grande, car les cercles s’intersectent à un angle plus proche de \\(90^\\circ\\).",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13 - Localisation</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/GPS/GPS.html#question-7",
+    "href": "exercices/GPS/GPS.html#question-7",
+    "title": "13 - Localisation",
+    "section": "Question 7",
+    "text": "Question 7\nSoit \\(P\\) un point de l’espace dont les coordonnées géocentriques sont \\((36000,\\ 10000,\\ 15000)\\), données en kilomètres.\n\nQuelles sont les coordonnées sphériques de \\(P\\) ?\n\nSolution. \\((\\rho;\\ \\theta;\\ \\phi) = (40261{,}644; 0{,}270946850; 0{,}381769355)\\)\n\nÀ quelle altitude, par rapport à la Terre, ce point est-il situé ?\n\nSolution. \\(33\\,883{,}644\\) km",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13 - Localisation</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/GPS/GPS.html#question-8",
+    "href": "exercices/GPS/GPS.html#question-8",
+    "title": "13 - Localisation",
+    "section": "Question 8",
+    "text": "Question 8\nLors de la 28\\(^\\text{e}\\) assemblée générale de l’Union astronomique internationale, l’unité astronomique (ua) a été définie comme valant exactement \\(149\\,597\\,870\\,700\\) m. Il s’agit grosso modo de la distance entre la Terre et le Soleil.\n\nEn arrondissant à la seconde, combien de temps met la lumière à nous parvenir du Soleil ?\n\nSolution. \\(8\\) minutes \\(19\\) secondes\n\nCombien d’unités astronomiques correspondent à une année-lumière ? Rappelons qu’une année-lumière correspond à la distance parcourue par la lumière en une année.\n\nSolution. \\(63\\,241\\) ua",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13 - Localisation</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/CG/CG.html",
+    "href": "exercices/CG/CG.html",
+    "title": "14 - Couteau gamma",
+    "section": "",
+    "text": "Question 1\nTrouvez le squelette de toutes les figures ci-dessous. Assurez-vous de bien définir chaque élément du squelette.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>14 - Couteau gamma</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/CG/CG.html#question-2",
+    "href": "exercices/CG/CG.html#question-2",
+    "title": "14 - Couteau gamma",
+    "section": "Question 2",
+    "text": "Question 2\nTrouvez le squelette de la région du plan incluse entre les deux branches de la parabole d’équation \\(y(x) = ax^2\\), où \\(a \\in \\, ]0, \\infty[ .\\)",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>14 - Couteau gamma</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/CG/CG.html#question-3",
+    "href": "exercices/CG/CG.html#question-3",
+    "title": "14 - Couteau gamma",
+    "section": "Question 3",
+    "text": "Question 3\nTrouvez le squelette d’un triangle arbitraire.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>14 - Couteau gamma</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/CG/CG.html#question-4",
+    "href": "exercices/CG/CG.html#question-4",
+    "title": "14 - Couteau gamma",
+    "section": "Question 4",
+    "text": "Question 4\nTrouvez deux ensembles du plan qui ont le segment \\(\\{(x, 0) : x \\in [-1, 1]\\}\\) comme squelette.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>14 - Couteau gamma</span>"
+    ]
+  },
+  {
+    "objectID": "exercices/CG/CG.html#question-5",
+    "href": "exercices/CG/CG.html#question-5",
+    "title": "14 - Couteau gamma",
+    "section": "Question 5",
+    "text": "Question 5\nTrouvez deux ensembles du plan qui ont le cercle de rayon 1 centré à l’origine comme squelette.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>14 - Couteau gamma</span>"
+    ]
+  }
+]

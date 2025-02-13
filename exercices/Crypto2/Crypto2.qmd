@@ -1,0 +1,195 @@
+---
+title: "08 - Cryptographie (2/3)"
+author: "Jérôme Soucy"
+---
+
+## Question 1
+
+Montrez qu'il y a une infinité de nombres premiers.
+
+::: solution
+Supposons, par l'absurde, que l'ensemble des nombres premiers soit fini. Notons ces nombres premiers par 
+$$
+p_1, p_2, \ldots, p_n.
+$$
+
+Construisons le nombre $N$ défini par :
+$$
+N = p_1 \cdot p_2 \cdot \ldots \cdot p_n + 1.
+$$
+
+Ce nombre $N$ est strictement supérieur à $1$ et n'est divisible par aucun des nombres premiers $p_1, p_2, \ldots, p_n$. En effet, la division de $N$ par un $p_i$ laisse un reste de $1$. Par conséquent, $N$ est soit un nombre premier, soit divisible par un nombre premier qui n'est pas dans la liste $\{p_1, p_2, \ldots, p_n\}$.
+
+Dans les deux cas, cela contredit l'hypothèse selon laquelle $p_1, p_2, \ldots, p_n$ sont tous les nombres premiers.
+
+Ainsi, il existe une infinité de nombres premiers.
+:::
+
+## Question 2
+
+Résolvez chacune des équations suivantes sans l'aide d'une calculatrice ou d'un ordinateur.
+
+1. $15x\equiv 2\pmod{4}$
+
+   :::solution
+   $x\equiv 2\pmod{4}$  
+   :::
+
+2. $12x\equiv 4\pmod{3}$
+
+   :::solution
+   Aucune solution
+   :::
+
+3. $2x\equiv 3\pmod{6}$
+
+   :::solution
+   Aucune solution
+   :::
+
+4. $2x\equiv 3\pmod{7}$
+
+   :::solution
+   $x\equiv 5\pmod{7}$
+   :::
+
+## Question 3
+
+Trouvez, s'ils existent, les inverses multiplicatifs des nombres ci-dessous.
+
+1. L'inverse de 12 modulo 23
+
+   :::solution
+   $2$
+   :::
+
+2. L'inverse de 33 modulo 114
+
+   :::solution
+   Pas inversible
+   :::
+
+3. L'inverse de 101 modulo 102
+
+   :::solution
+   $101$
+   :::
+
+## Question 4
+
+Résolvez les systèmes d'équations de congruences ci-dessous sans l'aide d'une calculatrice ou d'un ordinateur.
+
+1. 
+   $$
+   x \equiv 1 \pmod{2} \\
+   x \equiv 1 \pmod{3} \\
+   x \equiv 1 \pmod {4}
+   $$
+   
+   :::solution
+   $x\equiv 1\pmod{12}$ 
+   :::
+
+2. 
+   $$
+   2x \equiv 3 \pmod{5} \\
+   3x \equiv 1 \pmod{8}
+   $$
+   
+   ::: solution
+   $x\equiv 19\pmod{40}$ 
+   :::
+
+## Question 5
+
+Nous avons chiffré le mot `bingo` avec un chiffre affine dont la clé est $x \mapsto 3x + 4$. Quel mot avons-nous obtenu ?
+
+::: solution
+`HCRWU`
+:::
+
+## Question 6
+
+Sans faire usage de résultats avancés de théorie des nombres, montrez que $\phi(p^n) = p^n - p^{n-1}$.
+
+::: solution
+La valeur de $\phi(p^n)$ correspond au nombre de nombres entre 1 et $p^n$ qui sont copremiers à $p^n$. Comme $p$ est le seul facteur premier de $p^n$, il suffit de compter les nombres qui n'ont pas $p$ comme facteur premier.  
+Les nombres qui ont $p$ comme facteur premier, et qui sont inférieurs ou égaux à $p^n$, sont précisément  
+$$
+1 \cdot p, 2 \cdot p, 3 \cdot p, \ldots, p^{n-1} \cdot p.
+$$
+Il y en a donc $p^{n-1}$. Par conséquent, il y a $p^n - p^{n-1}$ nombres entre 1 et $p^n$ qui sont copremiers à $p^n$, d'où $\phi(p^n) = p^n - p^{n-1}$.
+:::
+
+## Question 7
+
+Le mot `GIBCT` a été obtenu après avoir chiffré le mot `bravo` à l'aide d'un chiffre affine $x \mapsto \alpha x + \beta$. Quelles étaient les valeurs de $\alpha$ et $\beta$ ?
+
+::: solution
+La transformation est $x \mapsto 5x + 1 \mod 26$, c'est-à-dire $\alpha = 5$ et $\beta = 1$.
+:::
+
+## Question 8
+
+Pour chacune des valeurs de $n$ ci-dessous, déterminez combien il y a de clés fonctionnelles possibles pour un chiffrement affine $x \mapsto \alpha x + \beta$ sur un alphabet à $n$ symboles.
+
+1. $n = 26$ 
+
+   :::solution
+   $311$
+   :::
+
+2. $n = 15$  
+
+   :::solution
+   $119$
+   :::
+
+3. $n = p$, où $p$ est un nombre premier  
+
+   ::: solution
+   $p^2 - p - 1$
+   :::
+
+4. $n = 5\,764\,801$  
+
+   ::: solution
+   $\phi(7^8) \cdot 7^8 - 1 = 28\,485\,369\,059\,657$
+   :::
+
+## Question 9
+
+Pour chacune des matrices suivantes, déterminez si son inverse existe modulo 8. Si c'est le cas, trouvez la matrice inverse.
+
+1. \begin{pmatrix}
+2 & 1 \\
+0 & 2
+\end{pmatrix}
+
+   ::: solution
+   Elle n'est pas inversible.
+   :::
+
+2. \begin{pmatrix}
+2 & 1 \\
+-3 & 5
+\end{pmatrix}
+
+   ::: solution
+   $$\begin{pmatrix}
+2 & 1 \\
+0 & 2
+\end{pmatrix}$$
+   :::
+
+## Question 10
+
+Chiffrez le mot `alberta` à l'aide de la méthode de Hill en utilisant la clé  
+$$\begin{pmatrix}
+5 & 12 \\
+-8 & 5
+\end{pmatrix}$$
+
+::: solution
+Si on prend la lettre $b$ comme symbole de remplissage, on obtient le cryptogramme `CDBMBLMF`. Si on choisit un autre symbole de remplissage, les deux derniers symboles du cryptogramme peuvent être différents.
+:::

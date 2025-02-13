@@ -1,0 +1,121 @@
+---
+title: "07 - Cryptographie (1/3)"
+author: "Jérôme Soucy"
+---
+
+## Question 1
+
+Chiffrez le mot _guitare_ selon la méthode de Jules César.
+
+::: solution
+`JXLWDUH`
+:::
+
+## Question 2
+
+Le mot _DXWR_ a été obtenu après avoir chiffré un message selon la méthode de Jules César. Quel était le message d'origine ?
+
+::: solution
+`auto`
+:::
+
+## Question 3
+
+Un cryptosystème basé sur le décalage chiffre le mot _chien_ en _HMNJS_. De quelle façon sera chiffré le mot _chat_ ?
+
+::: solution
+`HMFY`
+:::
+
+## Question 4
+
+Chiffrez le message _jaimelesexpos_ avec la méthode de Vigenère en utilisant la clé $(1,3,24)$.
+
+::: solution
+`KDGNHJFVCYSMT`
+:::
+
+## Question 5
+
+Soient $a, b$ et $c$ des entiers avec $a \neq 0$. Montrez les énoncés ci-dessous.
+
+1. Si $a|b$, alors $a|bc$.
+2. Si $b \neq 0$, alors $a|b$ et $b|c$ entraînent que $a|c$.
+3. Si $a|b$ et $a|c$, alors $a|(bx+cy)$ pour tout $x, y \in \mathbb{Z}$.
+4. Si $b \neq 0$, le fait que $a|b$ et $b|a$ implique que $a = \pm b$.
+5. Si $c \neq 0$ et que $a|b$, alors $ac|bc$.
+
+::: solution
+1. Si $a|b$, alors il existe $k \in \mathbb{Z}$ tel que $b = ka$. Ainsi, $bc = kac = ja$, où $j = kc \in \mathbb{Z}$. On a donc $a|bc$.
+
+2. Si $a|b$ et $b|c$, alors il existe $k$ et $j \in \mathbb{Z}$ tels que $b = ka$ et $c = jb$. Nous avons donc $c = jka = la$, où $l = jk \in \mathbb{Z}$. Cela montre que $a$ divise $c$.
+
+3. Si $a|b$ et $a|c$, alors il existe $k, j \in \mathbb{Z}$ tels que $b = ka$ et $c = ja$. Nous avons donc pour tout $x, y \in \mathbb{Z}$,
+   $$
+   bx + cy = kax + jay = (kx + jy)a = la,
+   $$
+   où $l = kx + jy \in \mathbb{Z}$. Ainsi, $a|(bx+cy)$.
+
+4. Si $a|b$ et $b|a$, alors il existe $k, j \in \mathbb{Z}$ tels que $b = ka$ et $a = jb$. On doit donc avoir $b = jka$. Comme $b \neq 0$, $jk = 1$. Les nombres $j$ et $k$ étant des entiers, $j = k = 1$ ou $j = k = -1$. Dans le premier cas, $a = b$, et dans l'autre, $a = -b$.
+
+5. Si $a|b$, alors il existe $k \in \mathbb{Z}$ tel que $b = ka$. On a donc $bc = k(ac)$. Les nombres $a$ et $c$ étant tous les deux différents de 0, $ac|bc$.
+:::
+
+## Question 6
+
+Soient $a, b, c, d$ et $m$, des entiers avec $m > 0$. Montrez chacune des énoncés ci-dessous.
+
+1. $a\equiv b\pmod m$, $a\equiv a\pmod m$ et $a-b\equiv 0\pmod m$ sont des énoncés équivalents.
+2. Si $a\equiv b\pmod m$ et $c\equiv d\pmod m$, alors $a+c\equiv b+d\pmod m$.
+3. Si $a\equiv b\pmod m$ et $b\equiv c\pmod m$, alors $a\equiv c\pmod m$.
+4. Si $ax\equiv ay\pmod m$ et que $\text{pgcd}(a, m) = 1$, alors $x\equiv y\pmod m$.
+5. $ax\equiv ay\pmod m$ n'implique pas que $x\equiv y\pmod m$.
+
+::: solution
+1. Nous avons que $a\equiv b\pmod m$ entraîne que $m$ divise $a-b$ par définition. D'après la proposition précédente, on aura que $m$ divise $(-1)(a-b)$, c'est-à-dire que $m$ divise $b-a$. Cela revient à affirmer que $b\equiv a\pmod m$. De la même façon, $b\equiv a\pmod m$ entraîne que $m$ divise $b-a$ par définition. D'après la proposition précédente, on aura que $m$ divise $(-1)(b-a)$, c'est-à-dire que $m$ divise $a-b$. Cela revient à affirmer que $a\equiv b\pmod m$. Si $a\equiv b\pmod m$, $m$ divise $a-b$ par définition. Ainsi, $m$ divise $(a-b)-0$, d'où $a-b\equiv 0\pmod m$. Si $a-b\equiv 0\pmod m$, alors $m$ divise $(a-b)-0$ par définition. Ainsi, $m$ divise $a-b$, d'où $a\equiv b\pmod m$.
+
+2. Si $a\equiv b\pmod m$ et $c\equiv d\pmod m$, alors $m$ divise $a-b$ et $c-d$. D'après la proposition précédente, $m$ doit diviser $a-b+c-d=(a+c)-(b+d)$. Par définition, on aura donc que $a+c\equiv b+d\pmod m$.
+
+3. Si $a\equiv b\pmod m$ et $b\equiv c\pmod m$, alors $m$ doit diviser $a-b$ et $b-c$. On aura donc, d'après la proposition précédente, que $m$ divise $(a-b)+(b-c)=a-c$. Cela veut précisément dire que $a\equiv c\pmod m$.
+
+4. Si $ax\equiv ay\pmod m$, alors il existe $k\in\mathbb{Z}$ tel que $ax-ay=a(x-y)=km$. Puisque $m|a(x-y)$, et que $\text{pgcd}(a,m)=1$, le lemme d'Euclide entraîne que $m$ doit diviser $x-y$. Il suit donc que $x\equiv y\pmod m$.
+
+5. Prenons $a=2,x=5, y=0$ et $m=10$. On a bien que $ax\equiv ay\pmod m$. Cependant, $x\not\equiv y\pmod m$.
+:::
+
+## Question 7
+
+En utilisant l'algorithme d'Euclide et des calculs supplémentaires, répondez aux questions ci-dessous.
+
+1. Trouvez le $\text{pgcd}$ de $42\,823$ et $6\,409$.
+2. Trouvez $x, y$ tels que $42\,823x + 6\,409y = 17$.
+3. Factorisez $42\,823$ et $6\,409$ en nombres premiers.
+4. Retrouver le $\text{pgcd}$ à partir des factorisations.
+
+::: solution
+1. Nous avons que
+		\begin{align}
+		42\,823=&~6\cdot 6\,409+4\,369\\
+		6\,409=&~1\cdot 4\,369+2\,040\\
+		4\,369=&~2\cdot 2\,040+289\\
+		2\,040=&~7\cdot 289+17\\
+		289=&~17\cdot 17.
+		\end{align}
+		Par conséquent, $\text{pgcd}(42\,823,6\,409)=17$.
+
+2. Nous avons que
+		\begin{align}
+		17=&~2\,040-7\cdot 289\\
+		=&~2\,040-7(4\,369-2\cdot 2\,040)\\
+		=&~15\cdot 2\,040-7\cdot 4\,369\\
+		=&~15\cdot(6\,409-4\,369)-7\cdot 4\,369\\
+		=&~15\cdot 6\,409-22\cdot 4\,369\\
+		=&~15\cdot 6\,409-22\cdot(22\,823-6\cdot 6\,409)\\
+		=&~147\cdot 6\,409-22\cdot 22\,823.
+		\end{align}
+		On peut donc prendre $x=-22$ et $y=147$. Il ne s'agit pas là de la seule possibilité pour $x$ et $y$.
+
+3. Pour trouver les nombres premiers qui divisent un entier $n$, on peut successivement diviser cet entier par les nombres premiers inférieurs à $\left\lfloor \sqrt{n}\right\rfloor.$ Si aucun de ces nombres premiers divise $n$, c'est que $n$ est lui-même un nombre premier. Ainsi, pour trouver les nombres premiers qui divisent $6\,409$, on doit s'intéresser aux nombres premiers entre 2 et 80. On peut vérifier que 13 divise $6\,409$, et qu'on a en fait $6\,409=13\cdot 493$. On doit maintenant factoriser 493. Les nombres premiers pouvant diviser 493 sont ceux entre 13 et 22. En effet, les nombres premiers inférieurs à 13 ne pourront pas diviser 493, car 493 est un facteur de $6\,409$, et aucun nombre premier entre 2 et 13 ne divisait $6\,409$. On trouve que $493=17\cdot 29$. Comme 13, 17 et 29 sont tous des nombres premiers, la factorisation est $6\,409=13\cdot 17\cdot 29$. En procédant de façon similaire, on trouve que $42\,823=11\cdot 17\cdot 229$. Notons que puisqu'on savait depuis la partie (a) que 17 était le plus grand commun diviseur des nombres $6\,409$ et $42\,823$, nous savions que ceux-ci étaient divisibles par 17, et qu'aucun autre nombre premier pouvait diviser à la fois les deux nombres. Cela pouvait éliminer quelques diviseurs possibles.
+
+4. En regardant la factorisation première des deux nombres, on voit que le seul nombre premier qui les divise tous les deux est 17. La plus grande puissance de 17 qui divise les deux nombres est $17^1$, et donc 17 est le plus grand commun diviseur de ceux-ci.
+:::

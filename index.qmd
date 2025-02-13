@@ -1,0 +1,33 @@
+# Présentation {.unnumbered}
+
+Bienvenue sur un site web complémentaire au site monPortail du cours **MAT-2901 : Mathématiques et technologie**, à l'Université Laval.
+
+Ce site contient des séries d'exercices conçues pour accompagner les étudiants et étudiantes dans le cours. Chaque série d'exercices est soigneusement élaborée pour approfondir votre compréhension des concepts clés et vous préparer aux évaluations.
+
+## Licence et attributions {.unnumbered}
+
+Ce site et son contenu sont mis à disposition sous licence Creative Commons Attribution - Pas d'Utilisation Commerciale (CC BY-NC).
+
+::: callout-note
+## Droits d'utilisation
+
+Vous êtes libre de :
+
+-   Partager, copier et redistribuer le contenu
+-   Adapter et transformer le contenu
+
+À condition de :
+
+-   Créditer la source en citant l'auteur du présent document avec un lien vers ce site
+-   Ne pas faire d'usage commercial du contenu
+
+Une partie du code présenté sur ce site a été généré avec l'assistance de l'intelligence artificielle Claude (Anthropic) et ChatGPT-4o (OpenAI), tout en étant vérifié et adapté pour garantir son exactitude et sa pertinence pédagogique.
+:::
+
+::: {#fig-ccIA layout-ncol="2"}
+![Licence Creative Commons BY-NC](by-nc.png){width="250px" fig-align="center"}
+
+![Généré avec assistance IA](AIA.jpg){width="75px" fig-align="center"}
+
+Certains éléments de code de ce site ont été générés par l'IA. Vous êtes libre d'utiliser le contenu de ce site dans la mesure où vous citez la source et n'en tirez pas de bénéfice financier.
+:::

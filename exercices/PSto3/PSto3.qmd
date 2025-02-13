@@ -1,0 +1,99 @@
+---
+title: "12 - Processus stochastiques (3/3)"
+author: "Jérôme Soucy"
+---
+
+## Indication
+Pour certaines questions, vous êtes encouragés à utiliser un outil informatique pour faire les calculs.
+
+### Question 1
+La matrice suivante est la matrice de transition d'une chaîne de Markov associée à un mini-web :
+
+$$
+\begin{pmatrix}
+0 & \frac{1}{2} & 0 & \frac{1}{2} \\
+\frac{1}{3} & 0 & 0 & 0 \\
+\frac{1}{3} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} \\
+\frac{1}{3} & 0 & \frac{1}{2} & 0
+\end{pmatrix}
+$$
+
+Donnez une représentation schématique du mini-web.
+
+:::solution
+![](matrice2graphe.png)
+:::
+
+### Question 2
+Considérez le mini-web suivant :
+
+![](3pages.png)
+
+1. Sans faire de calculs, déterminez le PageRank du mini-web.
+2. Pouvez-vous ajouter d'autres liens tout en conservant le même PageRank ?
+
+:::solution
+
+1. Puisqu'un promeneur se déplace en suivant les liens et passe autant de temps sur chaque page, le PageRank est
+   $$
+   1 \cong 2 \cong 3.
+   $$
+
+2. On peut ajouter des liens de manière symétrique pour conserver le même PageRank. Par exemple :
+
+![](solsym.png)
+:::
+
+### Question 3
+Soit $\mathcal{W}$ le mini-web suivant :
+
+![](5pages.png)
+
+1. Si un promeneur débute à la page 5, quel sera son PageRank ?
+2. Que se passe-t-il s'il débute à la page 2 ?
+3. Déterminez la matrice de transition de $\mathcal{W}$.
+4. Trouvez un vecteur $\vec{v}$ tel que $M\vec{v} = \vec{v}$.
+5. Trouvez le polynôme caractéristique de $M$.
+6. Trouvez les valeurs propres de $M$.
+7. Modifiez la matrice pour tenir compte des pages sans liens sortants. Appelez cette matrice $N$.
+8. Calculez la matrice Google $G$ avec une probabilité de téléportation $\frac{1}{10}$.
+9. Utilisez $G$ pour déterminer le PageRank.
+
+## Question 4
+Considérez le mini-web $\mathcal{W}$ ci-dessous.
+
+![](7pages.png)
+
+1. Trouvez la matrice de transition de $\mathcal{W}$.
+2. Trouvez la matrice de transition de $\mathcal{W}$ qui permet la téléportation avec probabilité 0.15.
+3. À l'aide d'un outil informatique, trouvez le PageRank de $\mathcal{W}$ (en utilisant la matrice trouvée en 2).
+
+### Question 5
+Considérez un mini-web $\mathcal{W}$ avec $N$ pages, où $N \geq 2$. Les vecteurs $\vec{e}$ et $\vec{E}$ sont définis par :
+
+$$
+\vec{e} = \begin{pmatrix}
+1 \\
+1 \\
+\vdots \\
+1
+\end{pmatrix}, \quad
+\vec{E} = \begin{pmatrix}
+E_1 \\
+E_2 \\
+\vdots \\
+E_N
+\end{pmatrix}, \quad
+E_i = \begin{cases}
+1 & \text{si la page } i \text{ n'a pas de liens sortants}, \\
+0 & \text{sinon.}
+\end{cases}
+$$
+
+1. À quoi correspond $\frac{1}{N}\vec{e}\vec{E}^T$?
+2. Si $A$ est la matrice de transition, exprimez $B$ pour tenir compte des pages sans liens sortants.
+3. Montrez que la matrice Google $G$, avec une probabilité $\beta$, peut s'exprimer :
+   $$
+   G = \beta A + \frac{1}{N} \vec{e} (\beta \vec{E}^T + (1 - \beta)\vec{e}^T).
+   $$
+4. Pourquoi $A$ est une matrice creuse ? Pourquoi $G$ est une matrice où tous les éléments sont dans $]0, 1[$ ?

@@ -1,0 +1,175 @@
+---
+title: "06 - Numération et stockage"
+author: "Jérôme Soucy"
+---
+
+# Questions sur la représentation des nombres et les images
+
+## Question 1
+
+Chacune des chaînes de 8 bits suivantes est associée à un nombre entier entre 0 et 255 selon sa représentation en base 2. Trouvez-le.
+
+1. `00010000`
+
+   :::solution
+   16
+   :::
+
+2. `10101010`
+
+   :::solution
+   170
+   :::
+
+3. `00001111`
+
+   :::solution
+   15
+   :::
+
+4. `11111011`
+
+   :::solution
+   251
+   :::
+
+
+## Question 2
+
+Chacun des nombres entiers entre 0 et 255 peut être représenté par une chaîne de 8 bits à l'aide de sa représentation en base 2. Trouvez les chaînes correspondant à chacun des entiers ci-dessous.
+
+1. 0
+
+   :::solution
+   `00000000`
+   :::
+
+2. 21
+
+   :::solution
+   `00010101`
+   :::
+
+3. 144
+
+   :::solution
+   `10010000`
+   :::
+
+4. 251
+
+   :::solution
+   `11111011`
+   :::
+
+## Question 3
+
+Chacun des nombres ci-dessous est écrit en base dix. Veuillez écrire ces nombres selon les conventions de la numération en base hexadécimale.
+
+1. 10
+
+   :::solution
+   `A`
+   :::
+
+2. 100
+
+   :::solution
+   `64`
+   :::
+
+3. 243
+
+   :::solution
+   `F3`
+   :::
+
+4. 9999
+
+   :::solution
+   `270F`
+   :::
+
+## Question 4
+
+Chaque nombre entier peut être représenté par une chaîne de symboles selon les conventions de la numération en base hexadécimale. Ci-dessous sont représentés des nombres entiers selon ces conventions. Déterminez de quels nombres entiers il s'agit.
+
+1. `123`
+
+   :::solution
+   291
+   :::
+
+2. `1AC`
+
+   :::solution
+   428
+   :::
+
+3. `ABBA`
+
+   :::solution
+   43 962
+   :::
+
+4. `9C9A`
+
+   :::solution
+   40 090
+   :::
+
+## Question 5
+
+Quelle sera la taille, en octets d'une chaîne de 16 symboles hexadécimaux ?
+
+:::solution
+8 octets
+:::
+
+## Question 6
+
+Pour chaque type de photo décrit ci-dessous, déterminez quelle sera la taille, en octets, d'une image dont la résolution est $1024 \times 1280$ pixels.
+
+1. Une image en noir et blanc seulement.
+
+   :::solution
+   163 840 octets
+   :::
+
+2. Une image faisant intervenir 256 tons de gris.
+
+   :::solution
+   1 310 720 octets
+   :::
+
+3. Une image dont le mode de description des couleurs est le RGB (*Red, Green, Blue*), où chacune des composantes de base peut prendre 256 tons différents.
+
+   :::solution
+   3 932 160 octets
+   :::
+
+4. L'image en (c) ayant subi une compression de rapport $4:1$.
+
+   :::solution
+   983 040 octets
+   :::
+
+## Question 7
+
+Quelle est la différence entre une image vectorielle et une image matricielle ?
+
+:::solution
+   Pour une image matricielle, l'information est emmagasinée pixel par pixel. Pour ce qui est de l'image    vectorielle, elle est définie par des éléments (ligne, points, courbes, etc.). À chaque fois qu'on visualise une image vectorielle, des calculs sont effectués, ce qui n'est pas le cas des images matricielles. Aussi, une image vectorielle peut être agrandie sans perte de qualité, contrairement aux images matricielles.
+:::
+
+---
+
+## Question 8
+
+Pourquoi une image en format `.BMP` est-elle plus volumineuse, à format égal, qu'une image de type `.JPEG` ?
+
+:::solution
+Une image en format `.BMP` est une image matricielle qui n'a subi aucun type de compression. Ainsi, une même quantité d'information décrit chacun des pixels de l'image.
+
+Pour une image en format `.JPEG`, l'image a été divisée en un certain nombre de blocs, qui dépend du taux de compression, afin de diminuer la taille finale de l'image. On essaie de conserver le plus d'information possible pour les blocs où il y a un grand changement de contraste, et peu pour ceux où il y a uniformité à l'intérieur d'un même bloc de pixels.
+:::

@@ -1,0 +1,127 @@
+---
+title: "10 - Processus stochastiques (1/3)"
+author: "Jérôme Soucy"
+---
+
+## Question 1
+
+Florence a trouvé que $\vec{v} = (1, -2, 6)$ est un vecteur propre associé à une certaine valeur propre $\lambda$ d'une matrice $A$. En utilisant un logiciel pour vérifier son résultat, elle a plutôt obtenu le vecteur $\vec{w} = (-5, 10, -30)$. Ne trouvant pas son erreur, elle demanda de l'aide à son enseignante, qui lui expliqua que le vecteur qu'elle avait obtenu est aussi une bonne réponse. Expliquez pourquoi.
+
+::: solution
+Florence n'a pas à être surprise qu'on lui propose un vecteur différent de celui qu'elle a trouvé. Dès qu'on sait que $\vec{v}$ est un vecteur propre d'une matrice associé à une valeur propre $\lambda$, n'importe quel vecteur colinéaire à $\vec{v}$ qui est non nul sera lui aussi un vecteur propre associé à $\lambda$. Comme $(-5, 10, -30) = -5 \cdot (1, -2, 6)$, il va de soi que $\vec{v}$ et $\vec{w}$ sont deux bonnes réponses.
+:::
+
+## Question 2
+
+Montrez que si $\vec{v}$ est un vecteur propre d'une matrice $A$ associé à une valeur propre $\lambda$, alors $\mu \vec{v}$ est lui aussi un vecteur propre de $A$ associé à $\lambda$, quel que soit $\mu \in \mathbb{R}$.
+
+::: solution
+Sera fait en classe.
+:::
+
+## Question 3
+
+Pour chacune des matrices suivantes, déterminez son polynôme caractéristique, ses valeurs propres, et les vecteurs propres associés à chacune des valeurs propres.
+
+1. \begin{pmatrix}
+6 & 14 & 9 \\
+0 & 3 & 0 \\
+0 & -10 & -3
+\end{pmatrix}
+
+   ::: solution
+   Le polynôme caractéristique est $p(\lambda) = -\lambda^3 + 6\lambda^2 + 9\lambda - 54$. Les valeurs propres sont $\lambda_1 = 6$, $\lambda_2 = -3$, et $\lambda_3 = 3$. Les vecteurs propres associés sont :
+   
+   - $\lambda_1$: $(t, 0, 0)$ où $t \in \mathbb{R}^{\star}$,
+   - $\lambda_2$: $(t, 0, -t)$ où $t \in \mathbb{R}^{\star}$,
+   - $\lambda_3$: $(t, 3t, -5t)$ où $t \in \mathbb{R}^{\star}$.
+   :::
+
+2. $$\begin{pmatrix}
+1 & 2 & 3 \\
+3 & 2 & 1 \\
+4 & 4 & 4
+\end{pmatrix}$$
+
+   ::: solution
+   Le polynôme caractéristique est $p(\lambda) = -\lambda^3 + 7\lambda^2 + 8\lambda$. Les valeurs propres sont $\lambda_1 = 8$, $\lambda_2 = -1$, et $\lambda_3 = 0$. Les vecteurs propres associés sont :
+   
+   - $\lambda_1$: $(5t, 4t, 9t)$ où $t \in \mathbb{R}^{\star}$,
+   - $\lambda_2$: $(t, -t, 0)$ où $t \in \mathbb{R}^{\star}$,
+   - $\lambda_3$: $(t, -2t, t)$ où $t \in \mathbb{R}^{\star}$.
+:::
+
+3. $$\begin{pmatrix}
+a & 0 \\
+0 & b
+\end{pmatrix}$$
+où $a, b \in \mathbb{R}$.
+
+   ::: solution
+   
+   **Cas 1:** $a = b = 0$
+   Le polynôme caractéristique est $p(\lambda) = -\lambda^2$. La seule valeur propre est $\lambda = 0$, et tous les vecteurs non nuls sont des vecteurs propres.
+
+   **Cas 2:** $a = b \neq 0$
+   La matrice est une multiple scalaire de l'identité, donc tout vecteur non nul est un vecteur propre. L'unique valeur propre correspond à l'entrée non nulle de la matrice.
+
+   **Cas 3:** $a \neq b$
+   Les valeurs propres sont $\lambda_1 = a$ et $\lambda_2 = b$. Les vecteurs propres associés sont :
+   
+   - $\lambda_1$: $(t, 0)$ où $t \in \mathbb{R}^{\star}$,
+   - $\lambda_2$: $(0, t)$ où $t \in \mathbb{R}^{\star}$.
+:::
+
+4. $$\begin{pmatrix}
+1 & 0 & \frac{1}{3} \\[0.1cm]
+0 & \frac{1}{2} & \frac{1}{3} \\
+0 & \frac{1}{2} & \frac{1}{3}
+\end{pmatrix}$$
+
+   ::: solution
+   Le polynôme caractéristique est $p(\lambda) = -\lambda^3 + \frac{11}{6}\lambda^2 - \frac{5}{6}\lambda$. Les valeurs propres sont $\lambda_1 = 1$, $\lambda_2 = \frac{5}{6}$, et $\lambda_3 = 0$. Les vecteurs propres associés sont :
+
+   - $\lambda_1$: $(t, 0, 0)$ où $t \in \mathbb{R}^{\star}$,
+   - $\lambda_2$: $(-2t, t, t)$ où $t \in \mathbb{R}^{\star}$,
+   - $\lambda_3$: $(t, 2t, -3t)$ où $t \in \mathbb{R}^{\star}$.
+:::
+
+## Question 4
+
+Soit $P$ une matrice ayant $\lambda$ comme valeur propre et $\vec{v}$ comme vecteur propre associé à $\lambda$. Si $n \in \mathbb{N}$, montrez par induction que $\lambda^n$ est une valeur propre de $P^n$, et que $\vec{v}$ est un vecteur propre de $P^n$ associé à $\lambda^n$.
+
+::: solution
+Sera fait en classe.
+:::
+
+## Question 5
+
+Montrez que deux vecteurs de probabilités ne peuvent pas être colinéaires.
+
+::: solution
+Sera fait en classe.
+:::
+
+## Question 6
+
+Une matrice $M$ possède un vecteur propre $\vec{v}$ qui est un vecteur de probabilités. Est-ce que $M$ est nécessairement stochastique ? Justifiez.
+
+::: solution
+Non, $M$ n'est pas nécessairement stochastique. Par exemple :
+$$
+A = \begin{pmatrix}
+1 & \frac{1}{2} \\
+0 & 2
+\end{pmatrix}, \quad \text{où } A \cdot \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}.
+$$
+Le vecteur $\begin{pmatrix} 1 \\ 0 \end{pmatrix}$ est un vecteur propre de $A$ associé à la valeur propre $1$, mais $A$ n'est pas stochastique.
+:::
+
+
+## Question 7
+
+Soient $M$ une matrice stochastique, et $\vec{v}$ un vecteur de probabilités. Montrez que $M\vec{v}$ est aussi un vecteur de probabilités.
+
+::: solution
+Sera fait en classe.
+:::

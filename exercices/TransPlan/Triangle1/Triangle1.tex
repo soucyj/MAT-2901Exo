@@ -1,0 +1,12 @@
+\documentclass[pstricks]{standalone}% remove the border key if you want a tight output without any border.
+\usepackage{pst-all}
+\begin{document}
+	\begin{pspicture}(-3,-2.4)(5,4)
+	\psset{xunit=1.8 cm, yunit=1.8 cm} \pshlabel \psvlabel
+	\def\pshlabel#1{\scriptsize #1}
+	\def\psvlabel#1{\scriptsize #1}
+	\pspolygon[linewidth=0.5 pt,fillstyle=solid,fillcolor=lightgray,linecolor=black](-1,0)(0,1)(2,0)
+	
+	\psaxes[Dx=.5,dx=1,Dy=.5,dy=1,showorigin=false]{->}(0,0)(-1.5,-1.1)(2.5,1.8)
+	\end{pspicture}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass{standalone}
+
+\usepackage{pst-all}
+\begin{document}
+	\begin{pspicture}(0,0)(8,8)
+	\psset{xunit=3 cm, yunit=3 cm}
+	\psline(0.25,0)(0.25,1.5)
+	\psline(1.25,0)(1.25,2.5)
+	\psline(2.25,0)(2.25,2.5)
+	\psline(0,0.25)(2.5,0.25)
+	\psline(0,1.25)(2.5,1.25)
+	\psline(1,2.25)(2.5,2.25)
+	
+	\uput[ur](0.25,0.25){6}
+	\uput[ur](0.25,1.25){3}
+	\uput[ur](1.25,0.25){7}
+	\uput[ur](1.25,1.25){4}
+	\uput[ur](1.25,2.25){1}
+	\uput[ur](2.25,0.25){8}
+	\uput[ur](2.25,1.25){5}
+	\uput[ur](2.25,2.25){2}
+	
+	\end{pspicture}
+\end{document}
